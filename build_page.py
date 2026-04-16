@@ -4,10 +4,13 @@ from collections import OrderedDict
 from html import escape
 from pathlib import Path
 import re
+from urllib.parse import quote
+
+import yaml
 
 
 ROOT = Path(__file__).resolve().parent
-RAW_PATH = ROOT / "raw"
+RAW_PATH = ROOT / "raw.yaml"
 OUTPUT_PATH = ROOT / "index.html"
 TITLE = "Warp Core Cafe Character List"
 SUBTITLE = "Jeff Carlisle painting reference"
@@ -42,23 +45,63 @@ ARTIST_BIO = [
 ]
 
 
-def parse_tiles(raw_text: str) -> list[dict[str, object]]:
-    tiles: list[dict[str, object]] = []
-    current: dict[str, object] | None = None
+def asset_href(value: str) -> str:
+    if re.match(r"^[a-z]+://", value, re.IGNORECASE):
+        return value
+    return quote(value, safe="/:#?&=%+")
 
-    for line in raw_text.splitlines():
-        match = re.match(r"^([A-Z]\d+):\s*(.*)$", line)
-        if match:
-            current = {"coord": match.group(1), "items": []}
-            tiles.append(current)
-            if match.group(2).strip():
-                current["items"].append(match.group(2).strip())
+
+def load_catalog(path: Path) -> list[dict[str, object]]:
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    entities = data.get("entities", {})
+    tiles_by_coord: OrderedDict[str, list[dict[str, object]]] = OrderedDict()
+
+    def build_entry(entity_id: str, entity: dict[str, object], note: str = "") -> dict[str, object]:
+        name = str(entity.get("name", entity_id)).strip()
+        aliases = [
+            str(alias).strip()
+            for alias in entity.get("aliases", [])
+            if str(alias).strip()
+        ]
+        ref_url = str(entity.get("ref_url") or "").strip()
+        ref_image = str(entity.get("ref_image") or "").strip()
+        coords = [str(coord).strip() for coord in entity.get("coords", []) if str(coord).strip()]
+        search_terms = " ".join([name, *aliases, note]).strip()
+        return {
+            "entity_id": entity_id,
+            "name": name,
+            "aliases": aliases,
+            "note": note,
+            "ref_url": ref_url,
+            "ref_image": ref_image,
+            "coords": coords,
+            "search_terms": search_terms,
+        }
+
+    for entity_id, entity in entities.items():
+        if not isinstance(entity, dict):
             continue
+        note = str(entity.get("note") or "").strip()
+        coords = entity.get("coords", [])
+        if isinstance(coords, str):
+            coords = [coords]
+        for coord in coords:
+            coord_str = str(coord).strip()
+            if not coord_str:
+                continue
+            tiles_by_coord.setdefault(coord_str, []).append(
+                build_entry(str(entity_id), entity, note)
+            )
 
-        if current and line.strip():
-            current["items"].append(line.strip())
-
-    return [tile for tile in tiles if tile["items"]]
+    tiles = [
+        {"coord": coord, "items": entries}
+        for coord, entries in sorted(
+            tiles_by_coord.items(),
+            key=lambda item: split_coord(item[0]),
+        )
+        if entries
+    ]
+    return tiles
 
 
 def group_tiles(
@@ -150,7 +193,7 @@ def render_reference_map(
         for tile in rows[row]:
             coord = str(tile["coord"])
             column = int(re.search(r"\d+", coord).group(0))
-            items = [str(item) for item in tile["items"]]
+            items = [str(item["name"]) for item in tile["items"]]
             count = len(items)
             label = "entry" if count == 1 else "entries"
             tooltip = f"{coord} - {count} {label}"
@@ -171,7 +214,7 @@ def render_reference_map(
             <p>Hover or tap a square to preview its coordinate, then click to jump to that tile in the list.</p>
           </div>
           <div class="reference-links">
-            <a class="external-link" href="{escape(GRID_IMAGE_NAME)}" target="_blank" rel="noreferrer">Open full image</a>
+            <a class="external-link" href="{escape(asset_href(GRID_IMAGE_NAME))}" target="_blank" rel="noreferrer">Open full image</a>
             <a class="external-link secondary-link" href="{escape(IMGUR_URL)}" target="_blank" rel="noreferrer">Open the Imgur reference</a>
           </div>
         </div>
@@ -183,7 +226,7 @@ def render_reference_map(
 {row_axis}
           </div>
           <div class="map-frame">
-            <img src="{escape(GRID_IMAGE_NAME)}" alt="Warp Core Cafe painting with coordinate grid">
+            <img src="{escape(asset_href(GRID_IMAGE_NAME))}" alt="Warp Core Cafe painting with coordinate grid">
             <div class="map-overlay">
 {chr(10).join(buttons)}
             </div>
@@ -218,6 +261,59 @@ def render_artist_note() -> str:
       </section>"""
 
 
+def render_tile_entry(entry: dict[str, object]) -> str:
+    name = escape(str(entry.get("name", "")))
+    note = str(entry.get("note", "")).strip()
+    ref_url = str(entry.get("ref_url", "")).strip()
+    ref_image = str(entry.get("ref_image", "")).strip()
+    coords = [str(coord).strip() for coord in entry.get("coords", []) if str(coord).strip()]
+    coords_text = ", ".join(coords)
+
+    links: list[str] = []
+    if ref_url:
+        links.append(
+            f'<a class="tile-entry-link" href="{escape(asset_href(ref_url))}" target="_blank" rel="noreferrer">Source page</a>'
+        )
+    if ref_image:
+        links.append(
+            f'<a class="tile-entry-link" href="{escape(asset_href(ref_image))}" target="_blank" rel="noreferrer">Reference image</a>'
+        )
+
+    links_html = ""
+    if links:
+        links_html = f"""
+                    <div class="tile-entry-links">
+{chr(10).join(f"                      {link}" for link in links)}
+                    </div>"""
+
+    coords_html = ""
+    if coords:
+        coords_html = f"""
+                  <p class="tile-entry-coords">Seen in: <span>{escape(coords_text)}</span></p>"""
+
+    note_html = ""
+    if note:
+        note_html = f"""
+                  <p class="tile-entry-note">{escape(note)}</p>"""
+
+    media_html = ""
+    if ref_image:
+        preview_href = asset_href(ref_url or ref_image)
+        media_html = f"""
+                  <a class="tile-entry-media" href="{escape(preview_href)}" target="_blank" rel="noreferrer">
+                    <img src="{escape(asset_href(ref_image))}" alt="Reference for {name}">
+                  </a>"""
+
+    return f"""              <li class="tile-entry">
+                <details class="tile-entry-details" data-entity-name="{name}">
+                  <summary class="tile-entry-summary">
+                    <span class="tile-entry-name">{name}</span>
+                  </summary>
+                  <div class="tile-entry-panel">{coords_html}{note_html}{links_html}{media_html}</div>
+                </details>
+              </li>"""
+
+
 def render_rows(
     rows: OrderedDict[str, list[dict[str, object]]],
 ) -> str:
@@ -239,10 +335,12 @@ def render_rows(
             column = int(re.search(r"\d+", coord_raw).group(0))
             offset_x = -(column - 1) * 100
             offset_y = -(row_index - 1) * 100
-            search_text = " ".join(str(item) for item in tile["items"])
-            items = "\n".join(
-                f"              <li>{escape(str(item))}</li>"
+            search_text = " ".join(
+                str(item.get("search_terms", item.get("name", "")))
                 for item in tile["items"]
+            )
+            items = "\n".join(
+                render_tile_entry(item) for item in tile["items"]
             )
             count = len(tile["items"])
             label = "entry" if count == 1 else "entries"
@@ -250,7 +348,7 @@ def render_rows(
             detail_actions = ""
             if detail_links:
                 links = "\n".join(
-                    f'                <a class="detail-link" href="{escape(detail["href"])}" target="_blank" rel="noreferrer">Open high-detail {escape(detail["label"])}</a>'
+                    f'                <a class="detail-link" href="{escape(asset_href(detail["href"]))}" target="_blank" rel="noreferrer">Open high-detail {escape(detail["label"])}</a>'
                     for detail in detail_links
                 )
                 detail_actions = f"""
@@ -271,7 +369,7 @@ def render_rows(
               </div>
               <aside class="tile-preview" aria-hidden="true">
                 <div class="tile-preview-frame">
-                  <img src="{escape(GRID_IMAGE_NAME)}" alt="">
+                  <img src="{escape(asset_href(GRID_IMAGE_NAME))}" alt="">
                 </div>
                 <p>Zoomed view of {coord}</p>
 {detail_actions}
@@ -778,6 +876,104 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         line-height: 1.45;
       }}
 
+      .tile-entry {{
+        list-style: none;
+      }}
+
+      .tile-entry-details {{
+        border-radius: 14px;
+        border: 1px solid transparent;
+        background: rgba(255, 252, 247, 0.55);
+      }}
+
+      .tile-entry-summary {{
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.55rem 0.7rem;
+        cursor: pointer;
+        list-style: none;
+      }}
+
+      .tile-entry-summary:hover {{
+        color: var(--accent);
+      }}
+
+      .tile-entry-summary::-webkit-details-marker {{
+        display: none;
+      }}
+
+      .tile-entry-summary::before {{
+        content: "+";
+        flex: 0 0 auto;
+        width: 1rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+        text-align: center;
+      }}
+
+      .tile-entry-details[open] .tile-entry-summary::before {{
+        content: "−";
+      }}
+
+      .tile-entry-name {{
+        min-width: 0;
+      }}
+
+      .tile-entry-panel {{
+        display: grid;
+        gap: 0.55rem;
+        padding: 0 0.7rem 0.7rem 2.25rem;
+      }}
+
+      .tile-entry-coords,
+      .tile-entry-note {{
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }}
+
+      .tile-entry-coords span {{
+        color: var(--text);
+        font-variant-numeric: tabular-nums;
+      }}
+
+      .tile-entry-links {{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }}
+
+      .tile-entry-link {{
+        display: inline-flex;
+        align-items: center;
+        padding: 0.2rem 0.55rem;
+        border-radius: 999px;
+        border: 1px solid rgba(125, 75, 46, 0.2);
+        background: rgba(125, 75, 46, 0.08);
+        text-decoration: none;
+        font-size: 0.76rem;
+        white-space: nowrap;
+      }}
+
+      .tile-entry-media {{
+        display: none;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(255, 252, 247, 0.9);
+      }}
+
+      .tile-entry-media img {{
+        display: block;
+        width: 100%;
+        height: auto;
+      }}
+
+      .tile-entry-details[open] .tile-entry-media {{
+        display: block;
+      }}
+
       .tile-preview {{
         display: none;
       }}
@@ -852,6 +1048,104 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         background: rgba(255, 253, 249, 0.9);
       }}
 
+      .entity-focus-card {{
+        padding: 1rem;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: rgba(255, 253, 249, 0.92);
+        box-shadow: var(--shadow);
+      }}
+
+      .entity-focus-head {{
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1rem;
+      }}
+
+      .entity-focus-back {{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.65rem;
+        padding: 0.7rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--bg-soft);
+        color: var(--text);
+        font: inherit;
+        cursor: pointer;
+      }}
+
+      .entity-focus-meta {{
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+        text-align: right;
+      }}
+
+      .entity-focus-layout {{
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(16rem, 20rem);
+        gap: 1.1rem;
+        align-items: start;
+      }}
+
+      .entity-focus-copy {{
+        min-width: 0;
+      }}
+
+      .entity-focus-copy h2 {{
+        margin: 0 0 0.8rem;
+        font-size: clamp(1.35rem, 2.6vw, 1.9rem);
+        line-height: 1.08;
+      }}
+
+      .entity-focus-body {{
+        display: grid;
+        gap: 0.7rem;
+      }}
+
+      .entity-focus-body .tile-entry-coords,
+      .entity-focus-body .tile-entry-note {{
+        font-size: 0.95rem;
+      }}
+
+      .entity-focus-body .tile-entry-links {{
+        gap: 0.55rem;
+      }}
+
+      .entity-focus-body .tile-entry-link {{
+        font-size: 0.84rem;
+        padding: 0.38rem 0.72rem;
+      }}
+
+      .entity-focus-body .tile-entry-media {{
+        display: block;
+      }}
+
+      .entity-focus-body .tile-entry-media img {{
+        width: min(100%, 28rem);
+      }}
+
+      .entity-focus-preview {{
+        display: grid;
+        gap: 0.55rem;
+      }}
+
+      .entity-focus-preview-label {{
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+        text-align: center;
+      }}
+
+      body.entity-focus-mode .row-section,
+      body.entity-focus-mode #empty-state {{
+        display: none !important;
+      }}
+
       [hidden] {{
         display: none !important;
       }}
@@ -897,12 +1191,31 @@ def build_html(tiles: list[dict[str, object]]) -> str:
           align-items: flex-start;
         }}
 
+        .tile-entry-links {{
+          justify-content: flex-start;
+        }}
+
+        .tile-entry-panel {{
+          padding-left: 0.7rem;
+        }}
+
         .tile-card.targeted .tile-body {{
           grid-template-columns: 1fr;
         }}
 
         .tile-card.targeted .tile-preview {{
           max-width: 14rem;
+        }}
+
+        .entity-focus-head,
+        .entity-focus-layout {{
+          grid-template-columns: 1fr;
+          flex-direction: column;
+          align-items: stretch;
+        }}
+
+        .entity-focus-meta {{
+          text-align: left;
         }}
       }}
     </style>
@@ -937,6 +1250,25 @@ def build_html(tiles: list[dict[str, object]]) -> str:
 {reference_map}
 
       <main class="results">
+        <section class="entity-focus-card" id="entity-focus" hidden>
+          <div class="entity-focus-head">
+            <button class="entity-focus-back" id="entity-focus-back" type="button">Back</button>
+            <p class="entity-focus-meta" id="entity-focus-meta"></p>
+          </div>
+          <div class="entity-focus-layout">
+            <div class="entity-focus-copy">
+              <h2 id="entity-focus-title"></h2>
+              <div class="entity-focus-body" id="entity-focus-body"></div>
+            </div>
+            <aside class="entity-focus-preview">
+              <div class="tile-preview-frame" id="entity-focus-preview">
+                <img src="{escape(asset_href(GRID_IMAGE_NAME))}" alt="">
+              </div>
+              <p class="entity-focus-preview-label" id="entity-focus-preview-label"></p>
+              <div class="tile-detail-actions" id="entity-focus-actions" hidden></div>
+            </aside>
+          </div>
+        </section>
         <div class="empty-state" id="empty-state" hidden>
           No matches found. Try a tile like <strong>B6</strong> or a title like <strong>Farscape</strong>.
         </div>
@@ -954,9 +1286,18 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       const cards = Array.from(document.querySelectorAll(".tile-card"));
       const sections = Array.from(document.querySelectorAll(".row-section"));
       const mapTiles = Array.from(document.querySelectorAll(".map-tile"));
+      const entityFocus = document.querySelector("#entity-focus");
+      const entityFocusBack = document.querySelector("#entity-focus-back");
+      const entityFocusMeta = document.querySelector("#entity-focus-meta");
+      const entityFocusTitle = document.querySelector("#entity-focus-title");
+      const entityFocusBody = document.querySelector("#entity-focus-body");
+      const entityFocusPreview = document.querySelector("#entity-focus-preview");
+      const entityFocusPreviewLabel = document.querySelector("#entity-focus-preview-label");
+      const entityFocusActions = document.querySelector("#entity-focus-actions");
       const prefersDirectManipulation = window.matchMedia("(pointer: coarse)").matches;
       const matchingCoords = new Set();
       let activeCoord = "";
+      let entityFocusState = null;
 
       function updateQueryParam() {{
         const value = searchInput.value.trim();
@@ -969,11 +1310,12 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         window.history.replaceState({{}}, "", `${{url.pathname}}${{url.search}}${{url.hash}}`);
       }}
 
-      function applyFilter(updateUrl = true) {{
+      function applyFilter(updateUrl = true, preferredCoord = "") {{
         const query = searchInput.value.trim().toLowerCase();
         const normalizedCoord = searchInput.value.trim().toUpperCase();
         let visibleCards = 0;
         matchingCoords.clear();
+        const visibleCoords = new Set();
 
         for (const card of cards) {{
           const matchesText = !query || (card.dataset.search || "").toLowerCase().includes(query);
@@ -982,6 +1324,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
           card.hidden = !matches;
           if (matches) {{
             visibleCards += 1;
+            visibleCoords.add(card.dataset.coord);
             if (query) {{
               matchingCoords.add(card.dataset.coord);
             }}
@@ -999,7 +1342,14 @@ def build_html(tiles: list[dict[str, object]]) -> str:
 
         const exactMatch = mapTiles.some((tile) => tile.dataset.coord === normalizedCoord);
         markMatchingCoords();
-        markActiveCoord(exactMatch ? normalizedCoord : "");
+        const nextActiveCoord = exactMatch
+          ? normalizedCoord
+          : (preferredCoord && visibleCoords.has(preferredCoord))
+            ? preferredCoord
+            : (activeCoord && visibleCoords.has(activeCoord))
+              ? activeCoord
+              : "";
+        markActiveCoord(nextActiveCoord);
         if (updateUrl) {{
           updateQueryParam();
         }}
@@ -1019,6 +1369,85 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         for (const card of cards) {{
           card.classList.toggle("targeted", card.dataset.coord === activeCoord);
         }}
+      }}
+
+      function syncFocusPreview(card) {{
+        if (!entityFocusPreview) {{
+          return;
+        }}
+        const styles = window.getComputedStyle(card);
+        for (const name of ["--tile-aspect", "--tile-offset-x", "--tile-offset-y", "--tile-columns", "--tile-rows"]) {{
+          entityFocusPreview.style.setProperty(name, styles.getPropertyValue(name));
+        }}
+      }}
+
+      function leaveEntityFocus(restorePrevious = true) {{
+        if (!document.body.classList.contains("entity-focus-mode")) {{
+          return;
+        }}
+
+        document.body.classList.remove("entity-focus-mode");
+        if (entityFocus) {{
+          entityFocus.hidden = true;
+        }}
+
+        const previousState = entityFocusState;
+        entityFocusState = null;
+
+        if (!restorePrevious || !previousState) {{
+          return;
+        }}
+
+        searchInput.value = previousState.query;
+        applyFilter(true, previousState.activeCoord);
+        if (typeof previousState.scrollY === "number") {{
+          window.scrollTo({{ top: previousState.scrollY, behavior: prefersDirectManipulation ? "auto" : "smooth" }});
+        }}
+      }}
+
+      function enterEntityFocus(details) {{
+        const card = details.closest(".tile-card");
+        const panel = details.querySelector(".tile-entry-panel");
+        if (!card || !panel || !entityFocus) {{
+          return;
+        }}
+
+        if (!entityFocusState) {{
+          entityFocusState = {{
+            query: searchInput.value,
+            activeCoord,
+            scrollY: window.scrollY,
+          }};
+        }}
+
+        const preferredCoord = card.dataset.coord || "";
+        const entityName = details.dataset.entityName || "";
+        const coords = Array.from(new Set(
+          Array.from(panel.querySelectorAll(".tile-entry-coords span"))
+            .flatMap((node) => (node.textContent || "").split(","))
+            .map((value) => value.trim())
+            .filter(Boolean)
+        ));
+
+        entityFocusTitle.textContent = entityName;
+        entityFocusBody.innerHTML = panel.innerHTML;
+        syncFocusPreview(card);
+        entityFocusPreviewLabel.textContent = preferredCoord
+          ? `Selected tile ${{preferredCoord}}`
+          : "";
+
+        const detailActions = card.querySelector(".tile-detail-actions");
+        entityFocusActions.innerHTML = detailActions ? detailActions.innerHTML : "";
+        entityFocusActions.hidden = !detailActions;
+
+        entityFocusMeta.textContent = coords.length
+          ? `${{coords.length}} tile${{coords.length === 1 ? "" : "s"}} highlighted on the map`
+          : "";
+
+        searchInput.value = entityName;
+        applyFilter(true, preferredCoord);
+        entityFocus.hidden = false;
+        document.body.classList.add("entity-focus-mode");
       }}
 
       function moveTooltip(x, y) {{
@@ -1068,6 +1497,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
 
       for (const tile of mapTiles) {{
         tile.addEventListener("click", () => {{
+          leaveEntityFocus(false);
           const coord = tile.dataset.coord;
           searchInput.value = coord;
           applyFilter();
@@ -1089,12 +1519,29 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         tile.addEventListener("blur", hideTooltip);
       }}
 
-      searchInput.addEventListener("input", applyFilter);
+      for (const details of document.querySelectorAll(".tile-entry-details")) {{
+        details.addEventListener("toggle", () => {{
+          if (!details.open) {{
+            return;
+          }}
+          enterEntityFocus(details);
+        }});
+      }}
+
+      searchInput.addEventListener("input", () => {{
+        leaveEntityFocus(false);
+        applyFilter();
+      }});
       clearButton.addEventListener("click", () => {{
+        leaveEntityFocus(false);
         searchInput.value = "";
         applyFilter();
         markActiveCoord("");
         searchInput.focus();
+      }});
+
+      entityFocusBack.addEventListener("click", () => {{
+        leaveEntityFocus(true);
       }});
 
       const initialQuery = new URL(window.location.href).searchParams.get("q");
@@ -1114,7 +1561,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
 
 
 def main() -> None:
-    tiles = parse_tiles(RAW_PATH.read_text(encoding="utf-8"))
+    tiles = load_catalog(RAW_PATH)
     OUTPUT_PATH.write_text(build_html(tiles), encoding="utf-8")
 
 

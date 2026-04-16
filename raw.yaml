@@ -1,0 +1,2647 @@
+entities:
+  uss_defiant_star_trek_deep_space_nine_1993_1999:
+    name: USS Defiant, Star Trek Deep Space Nine (1993-1999)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A2]
+  hammerhead_fighter_space_above_and_beyond:
+    name: 'Hammerhead fighter, Space: Above and Beyond'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A2]
+  borg_cube_star_trek_first_contact:
+    name: Borg Cube - Star Trek First Contact
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A2, A3, B3]
+  x_wing_fighter_star_wars:
+    name: X-Wing Fighter, Star Wars
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A3, A4]
+  death_star_star_wars_return_of_the_jedi:
+    name: Death Star, Star Wars Return of the Jedi
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A4]
+  hms_endeavor_micronauts:
+    name: HMS Endeavor, Micronauts
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A5, A6]
+  red_lectroid_miniship_and_black_lectroid_mothership_the_adventures_of_buckaroo_banzai_across_the_8th_dimension:
+    name: Red Lectroid miniship and Black Lectroid mothership, The Adventures of Buckaroo Banzai Across the 8th Dimension
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A6]
+  babylon_5:
+    name: Babylon 5
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A6]
+  klingon_d7_cruiser_star_trek:
+    name: Klingon D7 cruiser, Star Trek
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A6, A7, A8, B7]
+  space_vampire_mothership_lifeforce:
+    name: Space Vampire Mothership, Lifeforce
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A6]
+  romulan_warbird_behind_d7_and_white_star_star_trek_the_next_generation_star_trek_deep_space_nine_star_trek_voyager:
+    name: 'Romulan Warbird [behind D7 and White Star] (Star Trek: The Next Generation, Star Trek: Deep Space Nine, Star Trek: Voyager)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A7]
+  white_star_babylon_5_also_b7:
+    name: White Star (Babylon 5) (also B7)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A7]
+  romulan_bird_of_prey_star_trek_tos:
+    name: 'Romulan Bird of Prey (Star Trek: TOS)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A8]
+  zanti_the_zanti_misfits_outer_limits_1963:
+    name: Zanti, The Zanti Misfits (Outer Limits 1963)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A9, A10, B10, C11]
+  crystal_bat_the_dark_crystal_1982:
+    name: Crystal Bat, The Dark Crystal (1982)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A12, B12]
+  space_herpes_the_ice_pirates_1984:
+    name: Space Herpes, The Ice Pirates (1984)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [A13]
+  colonial_viper_battlestar_galactica:
+    name: Colonial Viper (Battlestar Galactica)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B1]
+  nell_ship_battle_beyond_the_stars_1980:
+    name: '"Nell" ship (Battle Beyond the Stars (1980))'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B1]
+  imperial_star_destroyer_star_wars:
+    name: Imperial Star Destroyer (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B2]
+  ghost_star_wars_rebels:
+    name: Ghost (Star Wars Rebels)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B2]
+  ud_4l_cheyenne_dropship_sulaco_aliens_1986_top_middle_half_of_tile:
+    name: UD-4L Cheyenne Dropship, Sulaco (Aliens, 1986) (top middle half of tile)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B3]
+  uss_enterprise_d_star_trek_the_next_generation:
+    name: 'USS Enterprise-D (Star Trek: The Next Generation)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B4]
+  star_fury_babylon_5_also_b6_c5_c6:
+    name: Star Fury (Babylon 5) [Also B6, C5, C6]
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B5]
+  warp_core_trough_b6_k7:
+    name: Warp core [Trough B6:K7]
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B6]
+  eagle_transporter_space_1999_1975:
+    name: 'Eagle Transporter, Space: 1999 (1975)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B6]
+  fighter_buck_rogers_in_the_25th_century:
+    name: Fighter (Buck Rogers in the 25th Century)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B6]
+  eagle_5_spaceballs:
+    name: Eagle 5, Spaceballs
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B7]
+  battlestar_galactica_battlestar_galactica:
+    name: Battlestar Galactica (Battlestar Galactica)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B8]
+  moya_farscape_also_b9:
+    name: Moya (Farscape) (Also B9)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B8]
+  jetfire_transformers_also_b9:
+    name: Jetfire (Transformers) (Also B9)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B8]
+  moya_farscape_continued:
+    name: Moya (Farscape) continued.
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B9]
+  gremlin_gremlins:
+    name: Gremlin (Gremlins)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B11]
+  ceti_alpha_v_eel_star_trek_ii_the_wrath_of_khan_1982:
+    name: Ceti Alpha V Eel, Star Trek II The Wrath of Khan (1982)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [B13, C13]
+  the_millennium_falcon_star_wars:
+    name: The Millennium Falcon (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C1]
+  uss_palomino_the_black_hole_1979:
+    name: USS Palomino (The Black Hole, 1979)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C2]
+  bebop_cowboy_bebop_also_d3:
+    name: Bebop (Cowboy Bebop) (also D3)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C3]
+  paranoid_battlesuit_gall_force_eternal_story_also_at_c4_d4:
+    name: 'Paranoid battlesuit (Gall Force: Eternal Story) (also at C4, D4)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C3]
+  planet_express_ship_futurama:
+    name: Planet Express Ship (Futurama)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C4]
+  ravager_m_ship_the_milano_guardians_of_the_galaxy_also_at_c3_d4:
+    name: Ravager M-ship, The Milano (Guardians of the Galaxy) (also at C3, D4)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C4]
+  radiant_vii_star_wars_episode_i_the_phantom_menace:
+    name: 'Radiant VII (Star Wars: Episode I - The Phantom Menace)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C5]
+  uss_enterprise_star_trek_the_original_series:
+    name: 'USS Enterprise (Star Trek: The Original Series)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C5]
+  narcissus_nostromo_lifeboat_alien_1979_aliens_1986:
+    name: Narcissus, Nostromo Lifeboat (Alien 1979, Aliens 1986)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C6]
+  engineer_ship_alien_1979_prometheus_2012:
+    name: Engineer Ship (Alien 1979, Prometheus 2012)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C8]
+  nebulon_b_frigate_hospital_ship_star_wars_episode_v_the_empire_strikes_back_star_wars_episode_vi_return_of_the_jedi:
+    name: 'Nebulon-B Frigate (hospital ship, Star Wars: Episode V - The Empire Strikes Back, Star Wars: Episode VI - Return of the Jedi)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C8]
+  uss_discovery_one_2001_a_space_odyssey:
+    name: 'USS Discovery One (2001: A Space Odyssey)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [C9]
+  insignia_cylon_empire_battlestar_galactica:
+    name: 'Insignia: Cylon Empire (Battlestar Galactica)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D1]
+  insignia_colonial_warrior_battlestar_galactica:
+    name: 'Insignia: Colonial Warrior (Battlestar Galactica)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D1]
+  insignia_rebel_alliance_star_wars_continues_d1:
+    name: 'Insignia: Rebel Alliance (Star Wars, continues D1)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D2]
+  imperial_probe_droid_star_wars:
+    name: Imperial Probe Droid (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D3]
+  close_encounters_of_the_third_kind_mothership_also_d5:
+    name: Close Encounters of the Third Kind mothership (also D5)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D4]
+  viper_bsg:
+    name: Viper (BSG)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D4]
+  rodger_young_starship_troopers:
+    name: Rodger Young (Starship Troopers)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D5]
+  uss_voyager_star_trek_voyager:
+    name: 'USS Voyager (Star Trek: Voyager)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D6]
+  serenity_firefly:
+    name: Serenity (Firefly)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D6]
+  uss_swinetrek_the_muppet_show_pigs_in_space:
+    name: 'USS Swinetrek (The Muppet Show: "Pigs in Space")'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D7]
+  giant_dragonfly_insect_nausicaa_of_the_valley_of_the_wind_1984:
+    name: Giant dragonfly "insect", Nausicaä of the Valley of the Wind (1984)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D7]
+  insignia_klingon_empire_star_trek:
+    name: 'Insignia: Klingon Empire (Star Trek)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D9]
+  max_flight_of_the_navigator_1986:
+    name: Max (Flight of the Navigator, 1986)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D10]
+  pit_droid_folded_up_star_wars_episode_i_the_phantom_menace:
+    name: 'Pit Droid folded up (Star Wars: Episode I - The Phantom Menace)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D11]
+  impossible_man_marvel_comics:
+    name: Impossible Man (Marvel Comics)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [D12]
+  bioraptor_riddick:
+    name: Bioraptor (Riddick)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [E1]
+  insignia_galactic_empire_star_wars:
+    name: 'Insignia: Galactic Empire (Star Wars)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [E4]
+  insignia_robotech_defense_force_robotech:
+    name: 'Insignia: Robotech Defense Force (Robotech)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [E4]
+  insignia_thundercats:
+    name: 'Insignia: ThunderCats'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [E5]
+  insignia_tron_s_chest_symbol_tron:
+    name: 'Insignia: Tron''s chest symbol (Tron)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [E6]
+  urskeks_mandala_of_the_great_conjunction_the_dark_crystal:
+    name: Urskeks mandala of The Great Conjunction (The Dark Crystal)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [E7]
+  lazerbeak_transformers:
+    name: Lazerbeak (Transformers)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [E8]
+  wall_e_and_eve_from_wall_e:
+    name: Wall-E and Eve from Wall-E
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [E11]
+  egg_and_facehugger_alien_franchise:
+    name: Egg and Facehugger (Alien franchise)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [E12]
+  atari_logo:
+    name: Atari logo
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F1]
+  kilroy_from_the_mr_roboto_music_video_by_styx:
+    name: Kilroy from the Mr. Roboto music video by Styx
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F1]
+  maximilian_the_black_hole_1979:
+    name: Maximilian, The Black Hole (1979)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F2]
+  robot_jox_mech_fight_achilles_left_vs_alexander_right:
+    name: 'Robot Jox mech fight: Achilles (left) vs Alexander (right)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F3]
+  v_i_n_cent_the_black_hole_1979:
+    name: V.I.N.CENT, The Black Hole (1979)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F4, G4]
+  symbiote_spider_man_spider_man_and_marvel_secret_war:
+    name: Symbiote Spider-Man, Spider-Man and Marvel Secret War
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F5]
+  optimus_prime_transformers_also_f8:
+    name: -Optimus Prime (Transformers) (also F8)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F7]
+  iron_giant_from_the_iron_giant_left_hand_appears_in_g9_and_h9:
+    name: Iron Giant from The Iron Giant (left hand appears in G9 and H9)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F8]
+  thunder_road_modified_tilt_a_whirl_car_explorer_s_1985:
+    name: Thunder Road, modified Tilt-A-Whirl car (Explorer's 1985)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F9]
+  c_57d_forbidden_planet_1956:
+    name: C-57D Forbidden Planet (1956)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F10]
+  jupiter_2_lost_in_space_1965:
+    name: Jupiter 2, Lost in Space (1965)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F10]
+  huey_dewey_and_louie_from_silent_running_1972:
+    name: Huey, Dewey, and Louie from Silent Running (1972)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [F12]
+  they_live_we_sleep_tag_they_live_1988:
+    name: '"They Live We Sleep" tag, They Live (1988)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G1]
+  stargate_ring_stargate:
+    name: Stargate Ring (Stargate)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G1]
+  pan_am_logo_and_orion_iii_space_clipper_2001_a_space_odyssey:
+    name: 'Pan Am logo and Orion III Space Clipper (2001: A Space Odyssey)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G2]
+  kuato_lives_tag_from_total_recall_1990:
+    name: Kuato Lives tag from Total Recall (1990)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G3]
+  weyland_yutani_symbol_alien_franchise:
+    name: Weyland-Yutani symbol, Alien franchise
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G3]
+  logo_buy_n_large_wall_e:
+    name: 'Logo: Buy''N Large (Wall-E)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G4]
+  robocop:
+    name: Robocop
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G5]
+  logo_omni_consumer_products_robocop:
+    name: 'Logo: Omni Consumer Products (Robocop)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G5]
+  diva_pavalaguna_the_fifth_element_1997:
+    name: Diva Pavalaguna, The Fifth Element (1997)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G5, H5, I5]
+  zorg_industries_logo_the_fifth_element:
+    name: Zorg Industries Logo, The Fifth Element
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G5]
+  gypsy_mystery_science_theater_3000_also_g6:
+    name: Gypsy, Mystery Science Theater 3000 (also G6)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G5]
+  omar_angel_rock_rule_1983:
+    name: Omar & Angel, Rock & Rule (1983)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G5]
+  wak_wak_explorers_1985:
+    name: Wak Wak, Explorers (1985)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G6]
+  flynn_s_arcade_sign_tron_1982:
+    name: Flynn's Arcade sign (Tron, 1982)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G8]
+  weebo_flubber:
+    name: Weebo (Flubber)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G8]
+  alien_vampires_lifeforce:
+    name: Alien Vampires, Lifeforce
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G8, G9]
+  borg_queen_head_star_trek_first_contact:
+    name: Borg Queen Head Star Trek First Contact
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G9]
+  v_visitors_sign_with_v_graffiti_v:
+    name: V Visitors sign with V graffiti, V
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G9]
+  iron_giant_hand_the_iron_giant:
+    name: Iron Giant Hand, The Iron Giant
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G10]
+  flash_goron_dale_arden_on_hawkman_rocket_cycle_flash_gordon_1980:
+    name: Flash Goron & Dale Arden on Hawkman Rocket Cycle, Flash Gordon (1980)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G10]
+  nomad_from_star_trek_episode_the_changeling:
+    name: NOMAD from Star Trek episode The Changeling
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G11, H11]
+  endor_shield_generator_star_wars_episode_vi_return_of_the_jedi:
+    name: 'Endor Shield Generator (Star Wars: Episode VI - Return of the Jedi)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G11, H11]
+  starchaser_ship_starchaser_the_legend_of_orin_1985:
+    name: 'StarChaser ship, StarChaser: The Legend of Orin (1985)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G12]
+  martian_manta_ship_war_of_the_worlds_1953:
+    name: Martian manta ship, War of the Worlds (1953)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G12]
+  lambda_class_t_4a_shuttle_star_wars:
+    name: Lambda-class T-4a shuttle (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G13]
+  breetai_a_zentraedi_commander_robotech_the_macross_saga:
+    name: 'Breetai, a Zentraedi commander (Robotech: The Macross Saga)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [G13]
+  bo_mighty_orbots:
+    name: Bo (Mighty Orbots)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H1]
+  barbarella_barbarella:
+    name: Barbarella (Barbarella)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H1]
+  ted_theodore_logan_bill_s_preston_esq_of_the_wyld_stallyns_bill_ted_s_excellent_adventure_1989:
+    name: Ted Theodore Logan & Bill S. Preston Esq. of the 'Wyld Stallyns' (Bill & Ted's Excellent Adventure, 1989)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H1]
+  silica_starchaser_the_legend_of_orin_1985:
+    name: 'Silica, Starchaser: The Legend of Orin (1985)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H2]
+  feyd_rautha_dune_1984:
+    name: Feyd Rautha, DUNE (1984)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H2]
+  robot_maria_das_maschinenmensch_metropolis_1927:
+    name: Robot Maria (Das Maschinenmensch), Metropolis (1927)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H2]
+  blue_sun_poster_firefly_serenity_2002:
+    name: Blue Sun poster, Firefly/Serenity (2002)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H2]
+  bai_ling_as_female_vulcan_officer_dancing_sar_trek:
+    name: Bai Ling as female Vulcan officer dancing, Sar Trek
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H2]
+  tardis_aka_sexy_doctor_who:
+    name: TARDIS (aka Sexy), Doctor Who
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H3]
+  leeloo_the_fifth_element_1997:
+    name: Leeloo, The Fifth Element (1997)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H3]
+  lyn_me_star_wars_return_of_the_jedi_special_edition:
+    name: Lyn Me, Star Wars Return of the Jedi Special Edition
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H3]
+  skeksis_chamberlain_the_dark_crystal:
+    name: Skeksis Chamberlain, The Dark Crystal
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H3]
+  rystall_star_wars_return_of_the_jedi_special_edition:
+    name: Rystall, Star Wars Return of the Jedi Special Edition
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H3]
+  rystall_star_wars_return_of_the_jedi_special_edition_1997:
+    name: Rystall, Star Wars Return of the Jedi Special Edition (1997)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H4]
+  twiki_buck_rogers:
+    name: Twiki - Buck Rogers
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H4]
+  voc_robot_doctor_who_the_robots_of_death:
+    name: VOC Robot, Doctor Who The Robots of Death
+    aliases: []
+    ref_url: null
+    ref_image: references/voc_robot_doctor_who_the_robots_of_death__H4.jpg
+    note: null
+    coords: [H4]
+  nalan_cheel_modal_nodes_bith_band_star_wars_a_new_hope_1977:
+    name: Nalan Cheel (Modal Nodes Bith Band), Star Wars A New Hope (1977)
+    aliases: []
+    ref_url: https://www.starwars.com/databank/figrin-d-an-and-the-modal-nodes
+    ref_image: references/Nalan_Cheel-SW_Card_Trader.webp
+    note: null
+    coords: [H4]
+  jabba_the_hutt_star_wars_return_of_the_jedi:
+    name: Jabba the Hutt, Star Wars Return of the Jedi
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H4]
+  jabba_the_hutt_star_wars_return_of_the_jedi_1983:
+    name: Jabba the Hutt, Star Wars Return of the Jedi (1983)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H5]
+  jeff_carlisle_on_jabba_s_lap:
+    name: Jeff Carlisle on Jabba's lap
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H5]
+  tech_mo_r_modal_nodes_bith_band_star_wars_a_new_hope_1977:
+    name: Tech Mo'r (Modal Nodes Bith Band), Star Wars A New Hope (1977)
+    aliases: []
+    ref_url: https://www.starwars.com/databank/figrin-d-an-and-the-modal-nodes
+    ref_image: null
+    note: null
+    coords: [H5]
+  sy_snootles_in_jack_burton_tank_top_return_of_the_jedi_1983:
+    name: Sy Snootles (in Jack Burton tank top), Return of the Jedi (1983)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H5, H6]
+  wak_explorers_1985:
+    name: Wak, Explorers (1985)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H6]
+  data_star_trek_the_next_generation:
+    name: 'Data (Star Trek: the Next Generation)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H7]
+  figrin_d_an_modal_nodes_bith_band_star_wars_a_new_hope_1977:
+    name: Figrin D'an (Modal Nodes Bith Band), Star Wars A New Hope (1977)
+    aliases: []
+    ref_url: https://www.starwars.com/databank/figrin-d-an-and-the-modal-nodes
+    ref_image: null
+    note: null
+    coords: [H7, I7]
+  monolith_2001_a_space_odyssey_1968:
+    name: 'Monolith, 2001: A Space Odyssey (1968)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H8]
+  klaatu_hand_raised_the_day_the_earth_stood_still_1951:
+    name: Klaatu (hand raised), The Day The Earth Stood Still (1951)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H8]
+  future_ai_ai_artificial_intelligence_2001:
+    name: 'Future AI, AI: Artificial Intelligence (2001)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H8]
+  b_9_robot_lost_in_space_1965:
+    name: B-9 Robot, Lost in Space (1965)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H8]
+  rambler_series_robot_lost_in_space_1998:
+    name: Rambler Series Robot, Lost in Space (1998)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H8]
+  gort_the_day_the_earth_stood_still_1951:
+    name: Gort, The Day the Earth Stood Still (1951)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H8]
+  robot_lost_in_space_2018:
+    name: Robot, Lost in Space (2018)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H9]
+  robby_the_robot_forbidden_planet:
+    name: Robby the Robot (Forbidden Planet)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H9]
+  verda_the_android_lost_in_space_1965:
+    name: Verda the Android, Lost in Space (1965)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H9]
+  jawa_star_wars:
+    name: Jawa, Star Wars
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H9]
+  body_of_borg_queen_star_trek_first_contact:
+    name: Body of Borg Queen, Star Trek First Contact
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H9]
+  marvin_the_hitchhiker_s_guide_to_the_galaxy_film:
+    name: Marvin, The Hitchhiker's Guide to the Galaxy (film)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H9]
+  lawgiver_statue_planet_of_the_apes:
+    name: Lawgiver Statue, Planet of the Apes
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H10]
+  cheetara_and_lion_o_thundercats:
+    name: Cheetara and Lion-O, Thundercats
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H10]
+  sith_statue_star_wars_revenge_of_the_sith:
+    name: Sith Statue, Star Wars Revenge of the Sith
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H10]
+  yip_yip_alien_sesame_street:
+    name: Yip Yip Alien, Sesame Street
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H10]
+  atreides_space_ship_dune:
+    name: Atreides Space Ship, DUNE
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H10, H11]
+  starfleet_shuttlecraft_star_trek:
+    name: Starfleet shuttlecraft (Star Trek)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H11]
+  luke_skywalker_s_x_34_landspeeder_star_wars_episode_iv_a_new_hope:
+    name: 'Luke Skywalker''s X-34 landspeeder (Star Wars - Episode IV: A New Hope)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H11]
+  starbug_red_dwarf:
+    name: Starbug (Red Dwarf)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H11]
+  jakes_ship_from_the_cat_from_outer_space:
+    name: Jake’s ship from The Cat from Outer Space
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H11]
+  superman:
+    name: Superman
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H12]
+  mooncake_final_space:
+    name: Mooncake (Final Space)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H12]
+  rick_morty_mrs_meeseeks_and_rick_s_ufo_rick_morty:
+    name: Rick, Morty, Mrs Meeseeks, and Rick's UFO (Rick & Morty)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H12]
+  korben_dallas_s_flying_taxi_the_fifth_element_h13_i12:
+    name: Korben Dallas's flying Taxi (The Fifth Element, H13 - I12)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [H12]
+  ohno_mighty_orbots:
+    name: Ohno, (Mighty Orbots)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I1]
+  skeletor_heman_and_the_masters_of_the_universe:
+    name: Skeletor (HeMan and the Masters of the Universe)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I1]
+  marta_orion_slave_girl_star_trek_tos_whom_gods_destroy_also_j3:
+    name: 'Marta, Orion slave girl (Star Trek: TOS, "Whom Gods Destroy") [Also J3]'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I3]
+  twiki_buck_rogers_2:
+    name: Twiki, Buck Rogers
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I4]
+  a_bith_the_new_essential_guide_to_alien_species_original_artist_william_o_connor_star_wars:
+    name: A Bith, The New Essential Guide to Alien Species (Original artist William O'Connor), Star Wars
+    aliases: []
+    ref_url: https://www.starwars.com/databank/figrin-d-an-and-the-modal-nodes
+    ref_image: references/Bith-NEGAS.webp
+    note: null
+    coords: [I4, I5, J4, J5]
+  dominar_rygel_xvi_farscape:
+    name: Dominar Rygel XVI (Farscape)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I6]
+  dalek_doctor_who:
+    name: Dalek (Doctor Who)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I8]
+  cyberman_doctor_who:
+    name: Cyberman (Doctor Who)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I8]
+  bender_futurama:
+    name: Bender (Futurama)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I8]
+  alien_earth_vs_the_flying_saucers_1956:
+    name: Alien, Earth vs. the Flying Saucers (1956)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I8]
+  cylon_battlestar_galactica_original_series:
+    name: Cylon - Battlestar Galactica (original series)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I8]
+  kryton_cat_lister_rimmer_i9_red_dwarf:
+    name: Kryton, Cat, Lister & Rimmer (I9) (Red Dwarf)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I8]
+  two_andorians_star_trek:
+    name: Two Andorians (Star Trek)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I8]
+  ka_d_argo_farscape:
+    name: Ka D'Argo - Farscape
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I8]
+  seven_of_nine_star_trek_voyager:
+    name: 'Seven of Nine (Star Trek: Voyager)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I9]
+  mac_zeebo_and_wiploc_earth_girls_are_easy:
+    name: Mac, Zeebo, and Wiploc (Earth Girls Are Easy)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I9]
+  aviana_mizzo_starchaser_the_legend_of_orin_continues_i10:
+    name: 'Aviana & Mizzo (Starchaser: The Legend of Orin, continues I10)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I9]
+  ? lumpy_a_guess_but_all_of_chewbacca_s_family_are_sitting_there_the_other_two_in_i11_just_can_t_tell_them_apart_the_star_wars_holiday_special
+  : name: Lumpy (A guess, but all of Chewbacca's family are sitting there, the other two in I11. Just can't tell them apart. The Star Wars Holiday Special)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I9]
+  zozo_the_adventures_of_the_galaxy_rangers:
+    name: Zozo (The Adventures of the Galaxy Rangers)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I9]
+  the_moon_le_voyage_dans_la_lun_a_trip_to_the_moon:
+    name: The Moon (Le Voyage Dans la Lun / A Trip to the Moon)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I9]
+  borg_star_trek:
+    name: Borg (Star Trek)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I10]
+  thark_john_carter_of_mars:
+    name: Thark (John Carter of Mars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I10]
+  martians_from_mars_attacks:
+    name: Martians from Mars Attacks
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I10]
+  martian_from_the_war_of_the_worlds:
+    name: Martian from The War of the Worlds
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I10]
+  ? itchy_malla_a_guess_but_all_of_chewbacca_s_family_are_sitting_there_the_third_in_i10_just_can_t_tell_them_apart_the_star_wars_holiday_special
+  : name: Itchy & Malla (A guess, but all of Chewbacca's family are sitting there, the third in I10. Just can't tell them apart. The Star Wars Holiday Special)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I10]
+  7_90_lexx:
+    name: 7-90 (Lexx)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I10]
+  dark_helmet_spaceballs:
+    name: Dark Helmet (Spaceballs)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I10]
+  harry_harry_and_the_hendersons:
+    name: Harry (Harry and the Hendersons)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I10]
+  gamorrean_guard_star_wars_episode_vi_return_of_the_jedi:
+    name: 'Gamorrean guard (Star Wars: Episode VI - Return of the Jedi)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I10, I11]
+  gwen_demarco_tawny_madison_galaxy_quest:
+    name: Gwen Demarco / Tawny Madison (Galaxy Quest)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I10]
+  waldo_zeptic_the_adventures_of_the_galaxy_rangers:
+    name: Waldo Zeptic (The Adventures of the Galaxy Rangers)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I11]
+  martian_girl_lisa_marie_mars_attacks_1996_also_j11:
+    name: Martian Girl (Lisa Marie), Mars Attacks (1996) (Also J11)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I11]
+  chig_in_space_suit_space_above_and_beyond_bordering_i11:
+    name: 'Chig in space suit (Space: Above and Beyond) (bordering I11)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I12]
+  predator:
+    name: Predator
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I12]
+  xenomorph_from_the_alien_franchise:
+    name: Xenomorph from the Alien franchise
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I12]
+  kang_and_kodos_behind_window_the_simpsons:
+    name: Kang and Kodos (behind window) (The Simpsons)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I12]
+  sil_in_alien_form_species:
+    name: Sil, in alien form (Species)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I12]
+  korben_dallas_the_fifth_element:
+    name: Korben Dallas, The Fifth Element
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I13]
+  zorak_space_ghost_coast_to_coast:
+    name: Zorak, Space Ghost Coast to Coast
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [I13]
+  micronauts_repto_mego_micronauts_series_4_5_http_micronauts_wikia_com_wiki_repto:
+    name: Micronauts, Repto (Mego Micronauts Series 4/5, http://micronauts.wikia.com/wiki/Repto)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J1, K1]
+  a_porg_star_wars:
+    name: A Porg (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J2, O13, P13, Q13]
+  a_tribble_star_trek:
+    name: A Tribble (Star Trek)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J2]
+  horta_star_trek_tos_the_devil_in_the_dark:
+    name: 'Horta (Star Trek: TOS, "The Devil in the Dark")'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J6]
+  morn_star_trek_deep_space_nine:
+    name: 'Morn (Star Trek: Deep Space Nine)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J6]
+  squidhead_quarren_star_wars_episode_vi_return_of_the_jedi:
+    name: 'Squidhead / Quarren (Star Wars: Episode VI - Return of the Jedi)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J7]
+  killer_klown_killer_klowns_from_outer_space:
+    name: Killer Klown (Killer Klowns from Outer Space)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J7]
+  jem_hadar_star_trek_deep_space_nine:
+    name: 'Jem''Hadar (Star Trek: Deep Space Nine)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J7]
+  scorpius_farscape:
+    name: Scorpius (Farscape)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J7]
+  agents_k_and_j_men_in_black:
+    name: Agents K and J (Men in Black)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J8]
+  jar_jar_binks_star_wars:
+    name: Jar-Jar Binks (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J8]
+  ruby_rhod_the_fifth_element_also_in_jk8_9:
+    name: Ruby Rhod (The Fifth Element) (also in JK8/9)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J8]
+  kai_opaka_star_trek_deep_space_nine:
+    name: 'Kai Opaka (Star Trek: Deep Space Nine)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J8]
+  captain_jack_harkness_doctor_who:
+    name: Captain Jack Harkness (Doctor Who)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J8]
+  vina_as_an_orion_slave_girl_star_trek_tos:
+    name: 'Vina as an Orion slave girl (Star Trek: TOS)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J9]
+  r2_kt_star_wars:
+    name: R2-KT (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J9]
+  gorn_star_trek_tos:
+    name: 'Gorn (Star Trek: TOS)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J9]
+  ? det_george_francisco_alien_nation_either_that_s_him_or_he_s_the_man_in_the_blue_suit_over_in_j12_it_could_be_either_one_but_i_think_it_s_this_one
+  : name: Det. George Francisco (Alien Nation) (Either that's him, or he's the man in the blue suit over in J12. It could be either one. But I think it's this one.)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J9]
+  ewoks_star_wars:
+    name: Ewoks (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J10]
+  mugato_star_trek_tos:
+    name: 'Mugato (Star Trek: TOS)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J10]
+  excalbian_star_trek_tos_episode_the_savage_curtain:
+    name: 'Excalbian (Star Trek: TOS, episode "The Savage Curtain")'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J10]
+  talosians_star_trek_tos:
+    name: 'Talosians (Star Trek: TOS)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J10]
+  jean_luc_picard_star_trek_the_next_generation:
+    name: 'Jean-Luc Picard (Star Trek: The Next Generation)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J10]
+  william_t_riker_star_trek_the_next_generation:
+    name: 'William T. Riker (Star Trek: The Next Generation)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J10]
+  nog_and_rom_star_trek_deep_space_nine:
+    name: 'Nog and Rom (Star Trek: Deep Space Nine)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J11]
+  two_breen_soldiers:
+    name: Two Breen soldiers
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J11]
+  q_in_his_judge_costume_star_trek_the_next_generation:
+    name: 'Q in his Judge costume (Star Trek: The Next Generation)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J11]
+  lore_star_trek_the_next_generation:
+    name: 'Lore (Star Trek: The Next Generation)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J11]
+  boba_fett_star_wars:
+    name: Boba Fett (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J11]
+  spock_star_trek_the_original_series:
+    name: 'Spock (Star Trek: The Original Series)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J11]
+  leonard_mccoy_star_trek_the_original_series:
+    name: 'Leonard McCoy (Star Trek: The Original Series)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J11]
+  nien_nunb_star_wars:
+    name: Nien Nunb (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J11]
+  darth_talon_star_wars_legends:
+    name: Darth Talon (Star Wars (Legends))
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J12]
+  mace_windu_star_wars:
+    name: Mace Windu (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J12]
+  bb_8_star_wars_the_force_awakens:
+    name: 'BB-8 (Star Wars: The Force Awakens)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J12]
+  a_vorvon_buck_rogers_in_the_25th_century_space_vampire:
+    name: A Vorvon (Buck Rogers in the 25th Century, "Space Vampire")
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J12]
+  a_red_lectroid_the_adventures_of_buckaroo_banzai_across_the_8th_dimension:
+    name: A Red Lectroid (The Adventures of Buckaroo Banzai Across the 8th Dimension)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J12]
+  michael_the_good_place:
+    name: (?) Michael (The Good Place)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [J12]
+  darth_vader_star_wars_only_right_arm_and_buttons_of_the_suit_visible:
+    name: Darth Vader (Star Wars) (only right arm and buttons of the suit visible)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K2]
+  wuher_the_bartender_from_mos_eisley_cantina_star_wars:
+    name: Wuher, the bartender from Mos Eisley cantina (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K3]
+  kuato_total_recall_1990:
+    name: Kuato (Total Recall, 1990)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K4]
+  he_man_he_man_and_the_masters_of_the_universe_cartoon_1983_1985_continued_in_k5:
+    name: He-Man (He-Man and the Masters of the Universe cartoon, 1983-1985) (continued in K5)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K4]
+  dragon_noodle_parlor_neon_sign_blade_runner_also_in_k4:
+    name: Dragon noodle parlor neon sign (Blade Runner) [also in K4]
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K5]
+  lightsaber_star_wars:
+    name: Lightsaber (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K5]
+  salacious_b_crumb_star_wars_episode_vi_return_of_the_jedi_1983:
+    name: 'Salacious B. Crumb (Star Wars: Episode VI - Return of the Jedi, 1983)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K6]
+  ackmena_the_star_wars_holiday_special:
+    name: Ackmena (The Star Wars Holiday Special)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K6]
+  gul_dukat_star_trek_deep_space_nine:
+    name: 'Gul Dukat (Star Trek: Deep Space Nine)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K7]
+  roth_h_ar_sarris_main_antagonist_of_galaxy_quest_also_in_l7:
+    name: Roth'h'ar Sarris, main antagonist of Galaxy Quest (also in L7)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K7]
+  kabe_star_wars:
+    name: Kabe (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K7]
+  tarfful_star_wars:
+    name: Tarfful (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K8]
+  ripley_and_jonesy_cat_from_alien:
+    name: Ripley and Jonesy (cat) from Alien
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K8]
+  alien_from_mars_attacks_being_strangled:
+    name: Alien from Mars Attacks (being strangled)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K9]
+  stormtroopers_star_wars:
+    name: Stormtroopers, Star Wars
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K9]
+  paul_atreides_from_dune_pre_muad_dib_attire:
+    name: Paul Atreides from Dune, pre-Muad'Dib attire
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K9]
+  stormtroopers_star_wars_2:
+    name: Stormtroopers (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K10]
+  james_t_kirk_star_trek_tos:
+    name: 'James T. Kirk (Star Trek: TOS)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K10]
+  drac_jeriba_and_zammis_enemy_mine:
+    name: Drac Jeriba and Zammis (Enemy Mine)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K10]
+  qui_gon_jinn_star_wars_also_l10:
+    name: Qui-Gon Jinn (Star Wars) (also L10)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K10]
+  han_star_wars:
+    name: Han (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K11]
+  leia_star_wars:
+    name: Leia (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K11]
+  greedo_star_wars_episode_iv_a_new_hope:
+    name: 'Greedo (Star Wars: Episode IV - A New Hope)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K11]
+  c3_po_star_wars:
+    name: C3-PO (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K11]
+  momaw_nadon_star_wars_episode_iv_a_new_hope:
+    name: 'Momaw Nadon (Star Wars: Episode IV - A New Hope)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K12]
+  ewok_possibly_chief_chirpa_star_wars_episode_vi_return_of_the_jedi:
+    name: 'Ewok, possibly Chief Chirpa? (Star Wars: Episode VI - Return of the Jedi)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K12]
+  admiral_ackbar_star_wars_episode_vi_return_of_the_jedi:
+    name: 'Admiral Ackbar (Star Wars: Episode VI - Return of the Jedi)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K12]
+  col_wilma_deering_buck_rogers_in_the_25th_century_1979:
+    name: Col. Wilma Deering (Buck Rogers in the 25th Century, 1979)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K12]
+  ? senator_padme_amidala_star_wars_episode_ii_attack_of_the_clones_no_she_s_not_in_this_version_she_is_visible_here_in_an_older_less_populated_version_of_jeff_carlisle_s_artwork_that_was_posted_on_reddit_in_late_july_2018_however
+  : name: 'Senator Padmé Amidala (Star Wars: Episode II - Attack of the Clones) - No, she''s not in this version. She is visible here in an older, less populated version of Jeff Carlisle''s artwork that was posted on Reddit in late July, 2018, however.'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K12]
+  scout_trooper_star_wars_episode_vi_return_of_the_jedi:
+    name: 'Scout Trooper (Star Wars: Episode VI - Return of the Jedi)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K12]
+  luke_skywalker_s_hands_and_feet_star_wars_the_last_jedi:
+    name: 'Luke Skywalker''s hands and feet, Star Wars: The Last Jedi'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [K12, L13, M12, M13, P13]
+  ming_the_merciless_flash_gordon_1980_chest_and_arms:
+    name: Ming the Merciless (Flash Gordon, 1980) — chest and arms
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L1]
+  tom_servo_and_crow_t_robot_mst3k_continued_in_m1:
+    name: Tom Servo and Crow T. Robot (MST3K) (continued in M1)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L1]
+  simon_game:
+    name: Simon game
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L2]
+  dancing_alien_spaceballs:
+    name: Dancing Alien (Spaceballs)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L2]
+  max_headroom_on_tv_screen:
+    name: Max Headroom (on TV screen)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L3]
+  saurian_brandy_bottle_star_trek:
+    name: Saurian brandy bottle (Star Trek)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L3, N9]
+  kanar_bottle_star_trek_deep_space_nine:
+    name: 'Kanar bottle (Star Trek: Deep Space Nine)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L3]
+  flag_of_the_united_citizen_federation_terran_federation_starship_troopers:
+    name: Flag of the United Citizen Federation / Terran Federation (Starship Troopers)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L3]
+  ? aviana_s_riding_helmet_starchaser_the_legend_of_orin_for_an_obscure_80_s_cartoon_this_has_been_showing_up_a_lot_here_this_is_the_5th_reference_i_ve_found
+  : name: 'Aviana''s riding helmet (StarChaser: The Legend of Orin - For an obscure 80''s cartoon, this has been showing up a lot here, this is the 5th reference I''ve found)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L4]
+  glaive_from_krull:
+    name: Glaive from Krull
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L4]
+  guinan_bar_tending_star_trek_the_next_generation:
+    name: Guinan bar tending, Star Trek The Next Generation
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L5, L6, M5, M6]
+  h_a_l_9000_2001_a_space_odyssey:
+    name: 'H.A.L. 9000 (2001: A Space Odyssey)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L5]
+  zik_zak_corp_logo_max_headroom_series_also_l4:
+    name: Zik-Zak Corp. logo (Max Headroom series) (also L4)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L5]
+  sword_of_omens_thunder_cats_continued_in_l6:
+    name: Sword of Omens (Thunder Cats, continued in L6)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L5]
+  inara_serra_firefly_serenity_2005:
+    name: Inara Serra, Firefly/Serenity (2005)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L6, M6, N6, O6]
+  facehugger_as_seen_in_ash_s_lab_alien:
+    name: Facehugger as seen in Ash's lab (Alien)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L7]
+  gigolo_joe_ai_artificial_intelligence_2001:
+    name: 'Gigolo Joe, AI: Artificial Intelligence (2001)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L7, M7, N7]
+  princess_aura_flash_gordon_1980_source:
+    name: Princess Aura (Flash Gordon, 1980, source)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L7]
+  twi_lek_dignitary_with_starlog_magazine_star_wars_episode_iii_revenge_of_the_sith:
+    name: 'Twi''lek dignitary with STARLOG magazine (Star Wars: Episode III - Revenge of the Sith)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L8]
+  jessica_atreides_dune:
+    name: Jessica Atreides (Dune)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L9]
+  starfleet_communicator_on_the_floor:
+    name: Starfleet communicator (on the floor)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L9]
+  nichelle_nichols_nyota_uhura_star_trek_the_original_series:
+    name: 'Nichelle Nichols / Nyota Uhura (Star Trek: The Original Series)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L9]
+  rose_star_wars:
+    name: Rose (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L10]
+  finn_star_wars:
+    name: Finn (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L10]
+  aeryn_sun_farscape_also_m10:
+    name: Aeryn Sun (Farscape) (also M10)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L10]
+  john_crichton_farscape_also_m10:
+    name: John Crichton (Farscape) (also M10)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L10]
+  mara_jade_star_wars:
+    name: Mara Jade (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L10]
+  r2_d2_star_wars:
+    name: R2-D2 (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L11]
+  thrawn_star_wars:
+    name: Thrawn (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L11]
+  waldo_robot_version_where_s_waldo_continued_in_l12_m11_m12:
+    name: Waldo (robot-version) (Where's Waldo?) (continued in L12,M11,M12)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L11]
+  scout_trooper_star_wars:
+    name: Scout trooper (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L12]
+  erin_dart_bia_o_rourke_singh_white_haired_woman_from_the_2nd_atari_force_team:
+    name: Erin "Dart" Bia O'Rourke-Singh, white-haired woman, from the 2nd Atari Force team
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L12]
+  ring_of_the_schwartz_spaceballs:
+    name: Ring of the Schwartz - Spaceballs
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [L13]
+  tom_servo_and_crow_t_robot_mst3k_continued_from_l1:
+    name: Tom Servo and Crow T. Robot (MST3K) (continued from L1)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [M1]
+  obey_and_conform_sign_they_live_1988:
+    name: '"Obey and Conform" sign, They Live (1988)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [M2]
+  rylos_license_plate_the_last_starfighter:
+    name: RYLOS license plate, The Last Starfighter
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [M3]
+  gizmo_mogwai_gremlins_1984:
+    name: Gizmo mogwai, Gremlins (1984)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [M3, N2, N3]
+  quark_bar_tending_star_trek_deep_space_nine_1993_1999:
+    name: Quark bar tending, Star Trek Deep Space Nine (1993-1999)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [M3, M4, N3, N4]
+  rick_deckard_blade_runner_1982:
+    name: Rick Deckard, Blade Runner (1982)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [M5, N4, N5, O4, O5]
+  rachael_tyrell_blade_runner_1982:
+    name: Rachael Tyrell, Blade Runner (1982)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [M5, M6, N5, N6, O5, O6]
+  krite_critters:
+    name: Krite, Critters
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [M8]
+  cover_of_starlog_number_1_featuring_kirk_spock_and_the_uss_enterprise_from_star_trek:
+    name: Cover of Starlog Number 1, featuring Kirk, Spock, and the USS Enterprise from Star Trek
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [M8]
+  mutant_this_island_earth_1955:
+    name: Mutant, This Island Earth (1955)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [M10]
+  thermian_bartender_galaxy_quest_1999:
+    name: Thermian bartender, Galaxy Quest (1999)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N1, O1]
+  fishy_joe_popplers_futurama:
+    name: Fishy Joe Popplers, Futurama
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N1, O1]
+  donald_kessler_head_mars_attacks_1996:
+    name: Donald Kessler head, Mars Attacks! (1996)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N1, N2, O2]
+  natalie_lake_dog_hybrid_mars_attacks_1996:
+    name: Natalie Lake / dog hybrid, Mars Attacks! (1996)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N2, N3, O2, O3]
+  young_jrrr_of_the_planet_omicron_persei_8_futurama:
+    name: Young Jrrr of the planet Omicron Persei 8, Futurama
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N3, O3]
+  londo_mollari_babylon_5_1993:
+    name: Londo Mollari, Babylon 5 (1993)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N3, N4, O3, O4, P3, P4]
+  baby_groot_guardians_of_the_galaxy_vol_2:
+    name: Baby Groot (Guardians of the Galaxy Vol 2)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N4]
+  annelid_aliens_worm_guys_men_in_black_1997:
+    name: Annelid aliens (Worm Guys), Men in Black (1997)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N4, N5, O4, O5, P4, P5, Q4]
+  prawn_christopher_johnson_son_district_9_2009:
+    name: '"prawn" Christopher Johnson & son, District 9 (2009)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N7, O7]
+  teddy_ai_artificial_intelligence_2001:
+    name: 'Teddy, AI: Artificial Intelligence (2001)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N7, N8, O7, O8]
+  rick_s_portal_gun_rick_and_morty:
+    name: Rick's portal gun (Rick and Morty)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N8]
+  e_t:
+    name: E.T.
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N9]
+  yoda_star_wars:
+    name: Yoda, Star Wars
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N9, O8, O9]
+  rocket_raccoon_guardians_of_the_galaxy:
+    name: Rocket Raccoon, Guardians of the Galaxy
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N9]
+  alien_from_invasion_of_the_saucer_men:
+    name: Alien from Invasion of the Saucer-Men
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N9]
+  mac_mac_and_me_with_big_mac_and_fries_from_mcdonald_s:
+    name: Mac (Mac and Me), with Big Mac and fries from McDonald's
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N10]
+  paul_alien_paul:
+    name: Paul alien, Paul
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N10]
+  gordon_shumway_alf:
+    name: Gordon Shumway, ALF
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N10, N11]
+  howard_the_duck_howard_the_duck_guardians_of_the_galaxy:
+    name: Howard the Duck, Howard the Duck & Guardians of the Galaxy
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N11, O11]
+  gaff_s_unicorn_origami_blade_runner:
+    name: Gaff's unicorn origami, Blade Runner
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N12, N13]
+  father_kilowatt_fix_it_batteries_not_included_1987:
+    name: Father (Kilowatt) "Fix-It", Batteries Not Included (1987)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N12, O12]
+  the_great_gazoo_the_flintstones_1965:
+    name: The Great Gazoo, The Flintstones (1965)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N13]
+  tribbles_star_trek:
+    name: Tribbles (Star Trek)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [N13, O13]
+  a_horga_hn_statue_from_planet_risa_star_trek_the_next_generation:
+    name: 'A Horga''hn statue from Planet Risa (Star Trek: The Next Generation)'
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O1, P1]
+  g_kar_babylon_5_1993:
+    name: G'Kar, Babylon 5 (1993)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O2, P1, P2, Q2, R2]
+  susan_ivanova_babylon_5_1993:
+    name: Susan Ivanova, Babylon 5 (1993)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O3, P2, P3, Q3, R3]
+  chiana_farscape_1999:
+    name: Chiana, Farscape (1999)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O5, P5, Q5]
+  mse_6_series_repair_droid_star_wars:
+    name: MSE-6 series repair droid, Star Wars
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O5]
+  bib_fortuna_return_of_the_jedi_1983:
+    name: Bib Fortuna, Return of the Jedi (1983)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O6, P6, P7, Q6, Q7, R6, R7]
+  ree_yees_return_of_the_jedi_1983:
+    name: Ree Yees, Return of the Jedi (1983)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O7, P7, Q7, R7]
+  arthur_dent_the_hitchhiker_s_guide_to_the_galaxy_2005:
+    name: Arthur Dent, The Hitchhiker's Guide to the Galaxy (2005)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O7, O8, P7, P8, Q7, Q8]
+  jen_the_dark_crystal:
+    name: Jen, The Dark Crystal
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O9, P9]
+  luke_skywalker_s_lightsaber_star_wars:
+    name: Luke Skywalker's lightsaber, Star Wars
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O9]
+  the_auryn_the_neverending_story:
+    name: The Auryn, The Neverending Story
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O9]
+  tribble_star_trek:
+    name: Tribble, Star Trek
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O9]
+  kira_the_dark_crystal:
+    name: Kira, The Dark Crystal
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O9, P9, P10, Q9]
+  maz_kanata_with_luke_skywalker_s_lightsaber_star_wars:
+    name: Maz Kanata with Luke Skywalker's lightsaber (Star Wars)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O10]
+  plif_the_hoojib_star_wars_1980s_marvel_comics:
+    name: Plif the Hoojib, Star Wars 1980s Marvel comics
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O11, P11]
+  mother_carmen_fix_it_batteries_not_included_1987:
+    name: Mother (Carmen) "Fix-It", Batteries Not Included (1987)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [O12, P11, P12, P13]
+  merlin_toy:
+    name: Merlin toy
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P1]
+  romulan_ale_bottle_from_star_trek:
+    name: Romulan Ale bottle from Star Trek
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P1]
+  mork_mork_and_mindy_1978:
+    name: Mork, Mork and Mindy (1978)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P2, Q2, Q3, R2]
+  delenn_babylon_5_1993:
+    name: Delenn, Babylon 5 (1993)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P4, Q4, R4]
+  little_fuzzy_little_fuzzy_books_by_h_beam_piper_1962:
+    name: Little Fuzzy, Little Fuzzy books by H. Beam Piper (1962)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P5, Q5]
+  the_hitchhiker_s_guide_to_the_galaxy:
+    name: The Hitchhiker's Guide to the Galaxy
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P8]
+  a_towel_the_most_massively_useful_thing_an_interstellar_hitchhiker_can_have:
+    name: A Towel. "... the most massively useful thing an interstellar hitchhiker can have."
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P8]
+  captain_dathon_star_trek_the_next_generation_episode_darmok:
+    name: Captain Dathon, Star Trek The Next Generation episode "Darmok"
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P8, P9, Q8, Q9, R8, R9]
+  fizgig_the_dark_crystal:
+    name: Fizgig, The Dark Crystal
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P9]
+  jake_zunar_j_5_9_doric_4_7_the_cat_from_outer_space:
+    name: Jake (Zunar J-5/9 Doric 4-7) - The Cat from Outer Space
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P10]
+  barf_spaceballs_1987:
+    name: Barf, Spaceballs (1987)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P10, P11, Q10, Q11]
+  wheems_fix_it_batteries_not_included_1987:
+    name: Wheems "Fix-It", Batteries Not Included (1987)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P11, P12, Q11, Q12]
+  puckmaren_flight_of_the_navigator_1986:
+    name: Puckmaren, Flight of the Navigator (1986)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P12, P13, Q12, Q13]
+  microtron_the_micronauts:
+    name: Microtron, The Micronauts
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [P13, Q13]
+  k_9_doctor_who:
+    name: K-9, Doctor Who
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q1, R1]
+  doctor_zira_planet_of_the_apes_1968:
+    name: Doctor Zira, Planet of the Apes (1968)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q3, Q4, R3, R4]
+  ro_man_robot_monster_1953:
+    name: Ro-Man, Robot Monster (1953)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q4, Q5, Q6, R4, R5, R6, R7]
+  the_norris_thing_the_thing_1982:
+    name: The Norris Thing, The Thing (1982)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q7, Q8, R7, R8]
+  dalgoda_dalgoda_comic_book_1986:
+    name: Dalgoda, Dalgoda comic book (1986)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q8, Q9, R8, R9]
+  centauri_the_last_starfighter_1984:
+    name: Centauri, The Last Starfighter (1984)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q9, Q10, R9, R10]
+  bug_the_micronauts:
+    name: Bug, The Micronauts
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q10, Q11, R10, R11]
+  acroyear_the_micronauts:
+    name: Acroyear, The Micronauts
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q11, Q12, R11]
+  revealed_alien_man_seen_through_the_special_sunglasses_they_live_1988:
+    name: Revealed Alien Man (seen through the special sunglasses), They Live (1988)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q12]
+  jetsam_fix_it_batteries_not_included_1987:
+    name: Jetsam "Fix-It", Batteries Not Included (1987)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q12, Q13, R13]
+  princess_mari_marionette_the_micronauts:
+    name: Princess Mari (Marionette), The Micronauts
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [Q13]
+  mugazombie_26_personal_from_my_childhood:
+    name: MUGAZOMBIE 26 - Personal, from my childhood
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [R1]
+  frank_the_pug_men_in_black:
+    name: Frank the Pug, Men In Black
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [R1]
+  jeff_carlisle_logo:
+    name: Jeff Carlisle logo
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [R11]
+  commander_arcturus_rann_the_micronauts:
+    name: Commander Arcturus Rann, The Micronauts
+    aliases: []
+    ref_url: null
+    ref_image: references/arcturus_rann.jpg
+    note: null
+    coords: [R12]
+  shrunken_kids_honey_i_shrunk_the_kids_1989:
+    name: Shrunken Kids, (Honey I Shrunk The Kids, 1989)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [R12, R13]
+  flotsam_fix_it_batteries_not_included_1987:
+    name: Flotsam "Fix-It", Batteries Not Included (1987)
+    aliases: []
+    ref_url: null
+    ref_image: null
+    note: null
+    coords: [R13]
