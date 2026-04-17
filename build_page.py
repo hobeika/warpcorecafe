@@ -1427,7 +1427,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         const maxColumn = Math.max(...columns);
         const spanRows = Math.max(1, maxRow - minRow + 1);
         const spanColumns = Math.max(1, maxColumn - minColumn + 1);
-        const focusAspect = (({GRID_IMAGE_WIDTH} * spanRows) / ({GRID_IMAGE_HEIGHT} * spanColumns)).toFixed(6);
+        const focusAspect = (({GRID_IMAGE_WIDTH} * totalRows * spanColumns) / ({GRID_IMAGE_HEIGHT} * totalColumns * spanRows)).toFixed(6);
         const imageWidth = ((totalColumns / spanColumns) * 100).toFixed(6);
         const imageHeight = ((totalRows / spanRows) * 100).toFixed(6);
         const offsetX = (-((minColumn - 1) / spanColumns) * 100).toFixed(6);
