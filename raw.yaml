@@ -2446,7 +2446,7 @@ entities:
     name: Mork, Mork and Mindy (1978)
     aliases: []
     ref_url: null
-    ref_image: null
+    ref_image: references/mork-mindy.webp
     note: null
     coords: [P2, Q2, Q3, R2]
   delenn_babylon_5_1993:
