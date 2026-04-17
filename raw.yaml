@@ -2340,7 +2340,7 @@ entities:
   chiana_farscape_1999:
     name: Chiana, Farscape (1999)
     aliases: []
-    ref_url: null
+    ref_url: https://farscape.fandom.com/wiki/Chiana
     ref_image: chiana.webp
     note: null
     coords: [O5, P5, Q5]
@@ -2361,8 +2361,8 @@ entities:
   ree_yees_return_of_the_jedi_1983:
     name: Ree Yees, Return of the Jedi (1983)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://starwars.fandom.com/wiki/Ree-Yees
+    ref_image: ree-yees.jpg
     note: null
     coords: [O7, P7, Q7, R7]
   arthur_dent_the_hitchhiker_s_guide_to_the_galaxy_2005:
@@ -2461,7 +2461,7 @@ entities:
     aliases: []
     ref_url: null
     ref_image: little_fuzzy.jpg
-    note: null
+    note: Image composed of two references. Stitched here in one image.
     coords: [P4, P5, Q4, Q5, R5]
   the_hitchhiker_s_guide_to_the_galaxy:
     name: The Hitchhiker's Guide to the Galaxy
