@@ -397,6 +397,16 @@ def build_html(tiles: list[dict[str, object]]) -> str:
     rows = group_tiles(tiles)
     total_tiles = len(tiles)
     total_items = sum(len(tile["items"]) for tile in tiles)
+    max_column = max(
+        int(re.search(r"\d+", str(tile["coord"])).group(0))
+        for row in rows.values()
+        for tile in row
+    )
+    total_rows = len(rows)
+    row_order_js = ", ".join(
+        f'"{row}": {index}'
+        for index, row in enumerate(rows.keys(), start=1)
+    )
     row_nav = render_nav(rows)
     artist_note = render_artist_note()
     reference_map = render_reference_map(rows)
@@ -997,6 +1007,11 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         height: calc(var(--tile-rows) * 100%);
       }}
 
+      #entity-focus-preview img {{
+        width: var(--focus-image-width, calc(var(--tile-columns) * 100%));
+        height: var(--focus-image-height, calc(var(--tile-rows) * 100%));
+      }}
+
       .tile-preview p {{
         margin: 0;
         color: var(--muted);
@@ -1294,6 +1309,9 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       const entityFocusPreview = document.querySelector("#entity-focus-preview");
       const entityFocusPreviewLabel = document.querySelector("#entity-focus-preview-label");
       const entityFocusActions = document.querySelector("#entity-focus-actions");
+      const totalColumns = {max_column};
+      const totalRows = {total_rows};
+      const rowOrder = {{{row_order_js}}};
       const prefersDirectManipulation = window.matchMedia("(pointer: coarse)").matches;
       const matchingCoords = new Set();
       let activeCoord = "";
@@ -1371,14 +1389,60 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         }}
       }}
 
-      function syncFocusPreview(card) {{
+      function splitCoord(coord) {{
+        const match = (coord || "").match(/^([A-Z]+)(\d+)$/);
+        if (!match) {{
+          return null;
+        }}
+        return {{
+          row: match[1],
+          column: Number(match[2]),
+        }};
+      }}
+
+      function syncFocusPreview(card, coords) {{
         if (!entityFocusPreview) {{
-          return;
+          return null;
         }}
-        const styles = window.getComputedStyle(card);
-        for (const name of ["--tile-aspect", "--tile-offset-x", "--tile-offset-y", "--tile-columns", "--tile-rows"]) {{
-          entityFocusPreview.style.setProperty(name, styles.getPropertyValue(name));
+
+        const parts = coords
+          .map(splitCoord)
+          .filter((value) => value && rowOrder[value.row]);
+
+        if (!parts.length) {{
+          const styles = window.getComputedStyle(card);
+          for (const name of ["--tile-aspect", "--tile-offset-x", "--tile-offset-y", "--tile-columns", "--tile-rows"]) {{
+            entityFocusPreview.style.setProperty(name, styles.getPropertyValue(name));
+          }}
+          entityFocusPreview.style.removeProperty("--focus-image-width");
+          entityFocusPreview.style.removeProperty("--focus-image-height");
+          return null;
         }}
+
+        const rowIndexes = parts.map((value) => rowOrder[value.row]);
+        const columns = parts.map((value) => value.column);
+        const minRow = Math.min(...rowIndexes);
+        const maxRow = Math.max(...rowIndexes);
+        const minColumn = Math.min(...columns);
+        const maxColumn = Math.max(...columns);
+        const spanRows = Math.max(1, maxRow - minRow + 1);
+        const spanColumns = Math.max(1, maxColumn - minColumn + 1);
+        const focusAspect = (({GRID_IMAGE_WIDTH} * spanRows) / ({GRID_IMAGE_HEIGHT} * spanColumns)).toFixed(6);
+        const imageWidth = ((totalColumns / spanColumns) * 100).toFixed(6);
+        const imageHeight = ((totalRows / spanRows) * 100).toFixed(6);
+        const offsetX = (-((minColumn - 1) / spanColumns) * 100).toFixed(6);
+        const offsetY = (-((minRow - 1) / spanRows) * 100).toFixed(6);
+
+        entityFocusPreview.style.setProperty("--tile-aspect", focusAspect);
+        entityFocusPreview.style.setProperty("--tile-offset-x", `${{offsetX}}%`);
+        entityFocusPreview.style.setProperty("--tile-offset-y", `${{offsetY}}%`);
+        entityFocusPreview.style.setProperty("--focus-image-width", `${{imageWidth}}%`);
+        entityFocusPreview.style.setProperty("--focus-image-height", `${{imageHeight}}%`);
+        return {{
+          startCoord: `${{Object.keys(rowOrder).find((row) => rowOrder[row] === minRow)}}${{minColumn}}`,
+          endCoord: `${{Object.keys(rowOrder).find((row) => rowOrder[row] === maxRow)}}${{maxColumn}}`,
+          isRegion: spanRows > 1 || spanColumns > 1,
+        }};
       }}
 
       function leaveEntityFocus(restorePrevious = true) {{
@@ -1431,9 +1495,11 @@ def build_html(tiles: list[dict[str, object]]) -> str:
 
         entityFocusTitle.textContent = entityName;
         entityFocusBody.innerHTML = panel.innerHTML;
-        syncFocusPreview(card);
+        const previewBounds = syncFocusPreview(card, coords);
         entityFocusPreviewLabel.textContent = preferredCoord
-          ? `Selected tile ${{preferredCoord}}`
+          ? previewBounds && previewBounds.startCoord
+            ? `${{previewBounds.isRegion ? "Region" : "Tile"}} ${{previewBounds.startCoord}}${{previewBounds.endCoord !== previewBounds.startCoord ? ` to ${{previewBounds.endCoord}}` : ""}} · selected tile ${{preferredCoord}}`
+            : `Selected tile ${{preferredCoord}}`
           : "";
 
         const detailActions = card.querySelector(".tile-detail-actions");
