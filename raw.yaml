@@ -2354,8 +2354,8 @@ entities:
   bib_fortuna_return_of_the_jedi_1983:
     name: Bib Fortuna, Return of the Jedi (1983)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://www.starwars.com/databank/bib-fortuna
+    ref_image: bib_fortuna.webp
     note: null
     coords: [O6, P6, P7, Q6, Q7, R6, R7]
   ree_yees_return_of_the_jedi_1983:
