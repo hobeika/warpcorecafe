@@ -2207,8 +2207,8 @@ entities:
   annelid_aliens_worm_guys_men_in_black_1997:
     name: Annelid aliens (Worm Guys), Men in Black (1997)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://meninblack.fandom.com/wiki/Worm
+    ref_image: neeble_and_sleeble_annelid_aliens.jpg
     note: null
     coords: [N4, N5, O4, O5, P4, P5, Q4]
   prawn_christopher_johnson_son_district_9_2009:
