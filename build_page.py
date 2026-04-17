@@ -262,6 +262,7 @@ def render_artist_note() -> str:
 
 
 def render_tile_entry(entry: dict[str, object]) -> str:
+    entity_id = escape(str(entry.get("entity_id", "")).strip())
     name = escape(str(entry.get("name", "")))
     note = str(entry.get("note", "")).strip()
     ref_url = str(entry.get("ref_url", "")).strip()
@@ -305,7 +306,7 @@ def render_tile_entry(entry: dict[str, object]) -> str:
                   </a>"""
 
     return f"""              <li class="tile-entry">
-                <details class="tile-entry-details" data-entity-name="{name}">
+                <details class="tile-entry-details" data-entity-id="{entity_id}" data-entity-name="{name}">
                   <summary class="tile-entry-summary">
                     <span class="tile-entry-name">{name}</span>
                   </summary>
@@ -1317,13 +1318,30 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       let activeCoord = "";
       let entityFocusState = null;
 
-      function updateQueryParam() {{
-        const value = searchInput.value.trim();
+      function updateQueryParam(value = searchInput.value.trim()) {{
         const url = new URL(window.location.href);
         if (value) {{
           url.searchParams.set("q", value);
         }} else {{
           url.searchParams.delete("q");
+        }}
+        url.searchParams.delete("entity");
+        url.searchParams.delete("coord");
+        window.history.replaceState({{}}, "", `${{url.pathname}}${{url.search}}${{url.hash}}`);
+      }}
+
+      function updateEntityParam(entityId, coord = "") {{
+        const url = new URL(window.location.href);
+        url.searchParams.delete("q");
+        if (entityId) {{
+          url.searchParams.set("entity", entityId);
+        }} else {{
+          url.searchParams.delete("entity");
+        }}
+        if (coord) {{
+          url.searchParams.set("coord", coord);
+        }} else {{
+          url.searchParams.delete("coord");
         }}
         window.history.replaceState({{}}, "", `${{url.pathname}}${{url.search}}${{url.hash}}`);
       }}
@@ -1469,14 +1487,16 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         }}
       }}
 
-      function enterEntityFocus(details) {{
+      function enterEntityFocus(details, options = {{}}) {{
+        const preserveState = options.preserveState !== false;
+        const updateUrl = options.updateUrl !== false;
         const card = details.closest(".tile-card");
         const panel = details.querySelector(".tile-entry-panel");
         if (!card || !panel || !entityFocus) {{
           return;
         }}
 
-        if (!entityFocusState) {{
+        if (preserveState && !entityFocusState) {{
           entityFocusState = {{
             query: searchInput.value,
             activeCoord,
@@ -1485,6 +1505,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         }}
 
         const preferredCoord = card.dataset.coord || "";
+        const entityId = details.dataset.entityId || "";
         const entityName = details.dataset.entityName || "";
         const coords = Array.from(new Set(
           Array.from(panel.querySelectorAll(".tile-entry-coords span"))
@@ -1511,9 +1532,33 @@ def build_html(tiles: list[dict[str, object]]) -> str:
           : "";
 
         searchInput.value = entityName;
-        applyFilter(true, preferredCoord);
+        applyFilter(false, preferredCoord);
+        if (updateUrl) {{
+          updateEntityParam(entityId, preferredCoord);
+        }}
         entityFocus.hidden = false;
         document.body.classList.add("entity-focus-mode");
+      }}
+
+      function openEntityById(entityId, coord = "", options = {{}}) {{
+        if (!entityId) {{
+          return false;
+        }}
+
+        const matches = Array.from(document.querySelectorAll(`.tile-entry-details[data-entity-id="${{CSS.escape(entityId)}}"]`));
+        if (!matches.length) {{
+          return false;
+        }}
+
+        const selectedDetails = coord
+          ? matches.find((details) => details.closest(".tile-card")?.dataset.coord === coord) || matches[0]
+          : matches[0];
+
+        if (!selectedDetails.open) {{
+          selectedDetails.open = true;
+        }}
+        enterEntityFocus(selectedDetails, options);
+        return true;
       }}
 
       function moveTooltip(x, y) {{
@@ -1610,14 +1655,34 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         leaveEntityFocus(true);
       }});
 
-      const initialQuery = new URL(window.location.href).searchParams.get("q");
-      if (initialQuery) {{
+      const initialUrl = new URL(window.location.href);
+      const initialEntity = initialUrl.searchParams.get("entity");
+      const initialCoord = initialUrl.searchParams.get("coord") || "";
+      const initialQuery = initialUrl.searchParams.get("q");
+      if (initialEntity) {{
+        if (!openEntityById(initialEntity, initialCoord, {{ preserveState: false, updateUrl: false }})) {{
+          searchInput.value = "";
+          applyFilter(false);
+        }}
+      }} else if (initialQuery) {{
         searchInput.value = initialQuery;
         applyFilter(false);
       }}
 
       window.addEventListener("popstate", () => {{
-        searchInput.value = new URL(window.location.href).searchParams.get("q") || "";
+        const url = new URL(window.location.href);
+        const entityId = url.searchParams.get("entity");
+        const coord = url.searchParams.get("coord") || "";
+        const query = url.searchParams.get("q") || "";
+        leaveEntityFocus(false);
+        if (entityId) {{
+          if (!openEntityById(entityId, coord, {{ preserveState: false, updateUrl: false }})) {{
+            searchInput.value = "";
+            applyFilter(false);
+          }}
+          return;
+        }}
+        searchInput.value = query;
         applyFilter(false);
       }});
     </script>
