@@ -2368,8 +2368,8 @@ entities:
   arthur_dent_the_hitchhiker_s_guide_to_the_galaxy_2005:
     name: Arthur Dent, The Hitchhiker's Guide to the Galaxy (2005)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://en.wikipedia.org/wiki/Arthur_Dent
+    ref_image: references/arthur_dent.webp
     note: null
     coords: [O7, O8, P7, P8, Q7, Q8]
   jen_the_dark_crystal:
