@@ -318,13 +318,11 @@ def render_tile_entry(entry: dict[str, object]) -> str:
                     <img src="{escape(asset_href(ref_image))}" alt="Reference for {name}">
                   </a>"""
 
-    return f"""              <li class="tile-entry">
-                <details class="tile-entry-details" data-entity-id="{entity_id}" data-entity-name="{name}">
-                  <summary class="tile-entry-summary">
-                    <span class="tile-entry-name">{name}</span>
-                  </summary>
-                  <div class="tile-entry-panel">{coords_html}{note_html}{links_html}{media_html}</div>
-                </details>
+    return f"""              <li class="tile-entry" data-entity-id="{entity_id}" data-entity-name="{name}">
+                <button class="tile-entry-trigger" type="button">
+                  <span class="tile-entry-name">{name}</span>
+                </button>
+                <div class="tile-entry-panel" hidden>{coords_html}{note_html}{links_html}{media_html}</div>
               </li>"""
 
 
@@ -901,40 +899,23 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         list-style: none;
       }}
 
-      .tile-entry-details {{
-        border-radius: 14px;
-        border: 1px solid transparent;
-        background: rgba(255, 252, 247, 0.55);
-      }}
-
-      .tile-entry-summary {{
+      .tile-entry-trigger {{
         display: flex;
         align-items: center;
-        gap: 0.6rem;
-        padding: 0.55rem 0.7rem;
+        width: 100%;
+        padding: 0.35rem 0;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        text-align: left;
         cursor: pointer;
-        list-style: none;
       }}
 
-      .tile-entry-summary:hover {{
+      .tile-entry-trigger:hover,
+      .tile-entry-trigger:focus-visible {{
         color: var(--accent);
-      }}
-
-      .tile-entry-summary::-webkit-details-marker {{
-        display: none;
-      }}
-
-      .tile-entry-summary::before {{
-        content: "+";
-        flex: 0 0 auto;
-        width: 1rem;
-        color: var(--muted);
-        font-size: 0.95rem;
-        text-align: center;
-      }}
-
-      .tile-entry-details[open] .tile-entry-summary::before {{
-        content: "−";
+        outline: none;
       }}
 
       .tile-entry-name {{
@@ -944,7 +925,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       .tile-entry-panel {{
         display: grid;
         gap: 0.55rem;
-        padding: 0 0.7rem 0.7rem 2.25rem;
+        padding: 0;
       }}
 
       .tile-entry-coords,
@@ -989,10 +970,6 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         display: block;
         width: 100%;
         height: auto;
-      }}
-
-      .tile-entry-details[open] .tile-entry-media {{
-        display: block;
       }}
 
       .tile-preview {{
@@ -1219,10 +1196,6 @@ def build_html(tiles: list[dict[str, object]]) -> str:
 
         .tile-entry-links {{
           justify-content: flex-start;
-        }}
-
-        .tile-entry-panel {{
-          padding-left: 0.7rem;
         }}
 
         .tile-card.targeted .tile-body {{
@@ -1498,11 +1471,11 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         }}
       }}
 
-      function enterEntityFocus(details, options = {{}}) {{
+      function enterEntityFocus(entry, options = {{}}) {{
         const preserveState = options.preserveState !== false;
         const updateUrl = options.updateUrl !== false;
-        const card = details.closest(".tile-card");
-        const panel = details.querySelector(".tile-entry-panel");
+        const card = entry.closest(".tile-card");
+        const panel = entry.querySelector(".tile-entry-panel");
         if (!card || !panel || !entityFocus) {{
           return;
         }}
@@ -1516,8 +1489,8 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         }}
 
         const preferredCoord = card.dataset.coord || "";
-        const entityId = details.dataset.entityId || "";
-        const entityName = details.dataset.entityName || "";
+        const entityId = entry.dataset.entityId || "";
+        const entityName = entry.dataset.entityName || "";
         const coords = Array.from(new Set(
           Array.from(panel.querySelectorAll(".tile-entry-coords span"))
             .flatMap((node) => (node.textContent || "").split(","))
@@ -1556,19 +1529,16 @@ def build_html(tiles: list[dict[str, object]]) -> str:
           return false;
         }}
 
-        const matches = Array.from(document.querySelectorAll(`.tile-entry-details[data-entity-id="${{CSS.escape(entityId)}}"]`));
+        const matches = Array.from(document.querySelectorAll(`.tile-entry[data-entity-id="${{CSS.escape(entityId)}}"]`));
         if (!matches.length) {{
           return false;
         }}
 
-        const selectedDetails = coord
-          ? matches.find((details) => details.closest(".tile-card")?.dataset.coord === coord) || matches[0]
+        const selectedEntry = coord
+          ? matches.find((entry) => entry.closest(".tile-card")?.dataset.coord === coord) || matches[0]
           : matches[0];
 
-        if (!selectedDetails.open) {{
-          selectedDetails.open = true;
-        }}
-        enterEntityFocus(selectedDetails, options);
+        enterEntityFocus(selectedEntry, options);
         return true;
       }}
 
@@ -1641,12 +1611,13 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         tile.addEventListener("blur", hideTooltip);
       }}
 
-      for (const details of document.querySelectorAll(".tile-entry-details")) {{
-        details.addEventListener("toggle", () => {{
-          if (!details.open) {{
+      for (const trigger of document.querySelectorAll(".tile-entry-trigger")) {{
+        trigger.addEventListener("click", () => {{
+          const entry = trigger.closest(".tile-entry");
+          if (!entry) {{
             return;
           }}
-          enterEntityFocus(details);
+          enterEntityFocus(entry);
         }});
       }}
 
