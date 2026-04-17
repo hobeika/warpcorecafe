@@ -857,14 +857,14 @@ entities:
     name: VOC Robot, Doctor Who The Robots of Death
     aliases: []
     ref_url: null
-    ref_image: references/voc_robot_doctor_who_the_robots_of_death__H4.jpg
+    ref_image: voc_robot_doctor_who_the_robots_of_death__H4.jpg
     note: null
     coords: [H4]
   nalan_cheel_modal_nodes_bith_band_star_wars_a_new_hope_1977:
     name: Nalan Cheel (Modal Nodes Bith Band), Star Wars A New Hope (1977)
     aliases: []
     ref_url: https://www.starwars.com/databank/figrin-d-an-and-the-modal-nodes
-    ref_image: references/Nalan_Cheel-SW_Card_Trader.webp
+    ref_image: Nalan_Cheel-SW_Card_Trader.webp
     note: null
     coords: [H4]
   jabba_the_hutt_star_wars_return_of_the_jedi:
@@ -1130,7 +1130,7 @@ entities:
     name: A Bith, The New Essential Guide to Alien Species (Original artist William O'Connor), Star Wars
     aliases: []
     ref_url: https://www.starwars.com/databank/figrin-d-an-and-the-modal-nodes
-    ref_image: references/Bith-NEGAS.webp
+    ref_image: Bith-NEGAS.webp
     note: null
     coords: [I4, I5, J4, J5]
   dominar_rygel_xvi_farscape:
@@ -1956,9 +1956,9 @@ entities:
     name: Inara Serra, Firefly/Serenity (2005)
     aliases: []
     ref_url: null
-    ref_image: null
+    ref_image: inara_serra.jpg
     note: null
-    coords: [L6, M6, N6, O6]
+    coords: [L6, M6, N6, O6, M7, N7]
   facehugger_as_seen_in_ash_s_lab_alien:
     name: Facehugger as seen in Ash's lab (Alien)
     aliases: []
@@ -2124,14 +2124,14 @@ entities:
     name: Rick Deckard, Blade Runner (1982)
     aliases: []
     ref_url: null
-    ref_image: null
+    ref_image: rick_deckard.jpg
     note: null
-    coords: [M5, N4, N5, O4, O5]
+    coords: [M4, M5, N4, N5, O4, O5]
   rachael_tyrell_blade_runner_1982:
     name: Rachael Tyrell, Blade Runner (1982)
     aliases: []
     ref_url: null
-    ref_image: null
+    ref_image: rachael_tyrell.jpg
     note: null
     coords: [M5, M6, N5, N6, O5, O6]
   krite_critters:
@@ -2341,7 +2341,7 @@ entities:
     name: Chiana, Farscape (1999)
     aliases: []
     ref_url: null
-    ref_image: null
+    ref_image: chiana.webp
     note: null
     coords: [O5, P5, Q5]
   mse_6_series_repair_droid_star_wars:
@@ -2369,7 +2369,7 @@ entities:
     name: Arthur Dent, The Hitchhiker's Guide to the Galaxy (2005)
     aliases: []
     ref_url: https://en.wikipedia.org/wiki/Arthur_Dent
-    ref_image: references/arthur_dent.webp
+    ref_image: arthur_dent.webp
     note: null
     coords: [O7, O8, P7, P8, Q7, Q8]
   jen_the_dark_crystal:
@@ -2446,7 +2446,7 @@ entities:
     name: Mork, Mork and Mindy (1978)
     aliases: []
     ref_url: null
-    ref_image: references/mork-mindy.webp
+    ref_image: mork-mindy.webp
     note: null
     coords: [P2, Q2, Q3, R2]
   delenn_babylon_5_1993:
@@ -2460,9 +2460,9 @@ entities:
     name: Little Fuzzy, Little Fuzzy books by H. Beam Piper (1962)
     aliases: []
     ref_url: null
-    ref_image: null
+    ref_image: little_fuzzy.jpg
     note: null
-    coords: [P5, Q5]
+    coords: [P4, P5, Q4, Q5, R5]
   the_hitchhiker_s_guide_to_the_galaxy:
     name: The Hitchhiker's Guide to the Galaxy
     aliases: []
@@ -2628,7 +2628,7 @@ entities:
     name: Commander Arcturus Rann, The Micronauts
     aliases: []
     ref_url: null
-    ref_image: references/arcturus_rann.jpg
+    ref_image: arcturus_rann.jpg
     note: null
     coords: [R12]
   shrunken_kids_honey_i_shrunk_the_kids_1989:

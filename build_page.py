@@ -18,6 +18,7 @@ IMGUR_URL = "https://imgur.com/t/warp_core_cafe"
 GRID_IMAGE_NAME = "wpc.jpg"
 GRID_IMAGE_WIDTH = 1217
 GRID_IMAGE_HEIGHT = 1800
+REFERENCE_IMAGE_DIR = "references"
 DETAIL_IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 ARTIST_NAME = "Jeff Carlisle"
 ARTIST_BIO = [
@@ -51,6 +52,16 @@ def asset_href(value: str) -> str:
     return quote(value, safe="/:#?&=%+")
 
 
+def normalize_ref_image(value: str) -> str:
+    if not value:
+        return ""
+    if re.match(r"^[a-z]+://", value, re.IGNORECASE):
+        return value
+    if "/" in value or "\\" in value:
+        return value
+    return f"{REFERENCE_IMAGE_DIR}/{value}"
+
+
 def load_catalog(path: Path) -> list[dict[str, object]]:
     data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     entities = data.get("entities", {})
@@ -66,7 +77,7 @@ def load_catalog(path: Path) -> list[dict[str, object]]:
             if str(alias).strip()
         ]
         ref_url = str(entity.get("ref_url") or "").strip()
-        ref_image = str(entity.get("ref_image") or "").strip()
+        ref_image = normalize_ref_image(str(entity.get("ref_image") or "").strip())
         coords = [
             str(coord).strip()
             for coord in entity.get("coords", [])
