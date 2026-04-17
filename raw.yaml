@@ -628,7 +628,7 @@ entities:
     ref_url: null
     ref_image: null
     note: null
-    coords: [G5, H5, I5]
+    coords: [G5, H5, I5, G6, H6]
   zorg_industries_logo_the_fifth_element:
     name: Zorg Industries Logo, The Fifth Element
     aliases: []
