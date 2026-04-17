@@ -56,7 +56,9 @@ def load_catalog(path: Path) -> list[dict[str, object]]:
     entities = data.get("entities", {})
     tiles_by_coord: OrderedDict[str, list[dict[str, object]]] = OrderedDict()
 
-    def build_entry(entity_id: str, entity: dict[str, object], note: str = "") -> dict[str, object]:
+    def build_entry(
+        entity_id: str, entity: dict[str, object], note: str = ""
+    ) -> dict[str, object]:
         name = str(entity.get("name", entity_id)).strip()
         aliases = [
             str(alias).strip()
@@ -65,7 +67,11 @@ def load_catalog(path: Path) -> list[dict[str, object]]:
         ]
         ref_url = str(entity.get("ref_url") or "").strip()
         ref_image = str(entity.get("ref_image") or "").strip()
-        coords = [str(coord).strip() for coord in entity.get("coords", []) if str(coord).strip()]
+        coords = [
+            str(coord).strip()
+            for coord in entity.get("coords", [])
+            if str(coord).strip()
+        ]
         search_terms = " ".join([name, *aliases, note]).strip()
         return {
             "entity_id": entity_id,
@@ -129,7 +135,10 @@ def discover_detail_images(
     detail_map: dict[str, list[dict[str, str]]] = {}
 
     for path in sorted(ROOT.iterdir()):
-        if not path.is_file() or path.suffix.lower() not in DETAIL_IMAGE_SUFFIXES:
+        if (
+            not path.is_file()
+            or path.suffix.lower() not in DETAIL_IMAGE_SUFFIXES
+        ):
             continue
         if path.name in {GRID_IMAGE_NAME, "grid_ref.jpg"}:
             continue
@@ -162,13 +171,6 @@ def discover_detail_images(
                 )
 
     return detail_map
-
-
-def render_nav(rows: OrderedDict[str, list[dict[str, object]]]) -> str:
-    return "\n".join(
-        f'        <a href="#row-{row.lower()}">{escape(row)}</a>'
-        for row in rows
-    )
 
 
 def render_reference_map(
@@ -212,10 +214,6 @@ def render_reference_map(
           <div>
             <h2>Grid Reference</h2>
             <p>Hover or tap a square to preview its coordinate, then click to jump to that tile in the list.</p>
-          </div>
-          <div class="reference-links">
-            <a class="external-link" href="{escape(asset_href(GRID_IMAGE_NAME))}" target="_blank" rel="noreferrer">Open full image</a>
-            <a class="external-link secondary-link" href="{escape(IMGUR_URL)}" target="_blank" rel="noreferrer">Open the Imgur reference</a>
           </div>
         </div>
         <div class="map-grid-shell" style="--map-columns:{max_column}; --map-rows:{len(row_labels)};">
@@ -267,7 +265,11 @@ def render_tile_entry(entry: dict[str, object]) -> str:
     note = str(entry.get("note", "")).strip()
     ref_url = str(entry.get("ref_url", "")).strip()
     ref_image = str(entry.get("ref_image", "")).strip()
-    coords = [str(coord).strip() for coord in entry.get("coords", []) if str(coord).strip()]
+    coords = [
+        str(coord).strip()
+        for coord in entry.get("coords", [])
+        if str(coord).strip()
+    ]
     coords_text = ", ".join(coords)
 
     links: list[str] = []
@@ -325,7 +327,9 @@ def render_rows(
         for tile in row
     )
     total_rows = len(rows)
-    tile_aspect_ratio = (GRID_IMAGE_WIDTH * total_rows) / (GRID_IMAGE_HEIGHT * max_column)
+    tile_aspect_ratio = (GRID_IMAGE_WIDTH * total_rows) / (
+        GRID_IMAGE_HEIGHT * max_column
+    )
     detail_images = discover_detail_images(rows)
 
     for row_index, (row, tiles) in enumerate(rows.items(), start=1):
@@ -405,13 +409,25 @@ def build_html(tiles: list[dict[str, object]]) -> str:
     )
     total_rows = len(rows)
     row_order_js = ", ".join(
-        f'"{row}": {index}'
-        for index, row in enumerate(rows.keys(), start=1)
+        f'"{row}": {index}' for index, row in enumerate(rows.keys(), start=1)
     )
-    row_nav = render_nav(rows)
     artist_note = render_artist_note()
     reference_map = render_reference_map(rows)
     row_sections = render_rows(rows)
+    suggestions = sorted(
+        {
+            str(value).strip()
+            for tile in tiles
+            for item in tile["items"]
+            for value in [item.get("name", ""), *item.get("aliases", [])]
+            if str(value).strip()
+        },
+        key=str.casefold,
+    )
+    suggestion_options = "\n".join(
+        f'            <option value="{escape(suggestion)}"></option>'
+        for suggestion in suggestions
+    )
 
     return f"""<!doctype html>
 <html lang="en">
@@ -608,23 +624,6 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         margin: 0;
         color: var(--muted);
         font-size: 0.95rem;
-      }}
-
-      .row-nav {{
-        display: flex;
-        gap: 0.55rem;
-        overflow-x: auto;
-        padding-bottom: 0.15rem;
-      }}
-
-      .row-nav a {{
-        flex: 0 0 auto;
-        padding: 0.42rem 0.7rem;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: var(--bg-soft);
-        text-decoration: none;
-        font-size: 0.92rem;
       }}
 
       .reference-card {{
@@ -1241,25 +1240,18 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       <header class="hero">
         <h1>{escape(TITLE)}</h1>
         <p>{escape(SUBTITLE)}. Search by tile, character, ship, show, or franchise.</p>
-        <div class="summary">
-          <span>{total_tiles} filled tiles</span>
-          <span>{total_items} named entries</span>
-          <span>Only non-empty coordinates are shown</span>
-        </div>
       </header>
-
-{artist_note}
 
       <section class="controls">
         <div class="search-row">
-          <input id="search" type="search" placeholder="Search for Yoda, Borg, A7, Babylon 5..." autocomplete="off" spellcheck="false">
+          <input id="search" type="search" placeholder="Search for Yoda, Borg, A7, Babylon 5..." autocomplete="off" spellcheck="false" list="search-suggestions">
+          <datalist id="search-suggestions">
+{suggestion_options}
+          </datalist>
           <button id="clear-search" type="button">Clear</button>
         </div>
         <div class="controls-meta">
           <p id="result-count" aria-live="polite">{total_tiles} tiles visible</p>
-          <nav class="row-nav" aria-label="Jump to row">
-{row_nav}
-          </nav>
         </div>
       </section>
 
@@ -1290,6 +1282,14 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         </div>
 {row_sections}
       </main>
+
+      <section class="summary">
+        <span>{total_tiles} filled tiles</span>
+        <span>{total_items} named entries</span>
+        <span>Only non-empty coordinates are shown</span>
+      </section>
+
+{artist_note}
     </div>
 
     <script>
