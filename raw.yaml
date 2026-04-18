@@ -2193,8 +2193,8 @@ entities:
   londo_mollari_babylon_5_1993:
     name: Londo Mollari, Babylon 5 (1993)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://babylon5.fandom.com/wiki/Londo_Mollari
+    ref_image: londo_mollari.jpg
     note: null
     coords: [N3, N4, O3, O4, P3, P4]
   baby_groot_guardians_of_the_galaxy_vol_2:
@@ -2326,22 +2326,22 @@ entities:
   a_horga_hn_statue_from_planet_risa_star_trek_the_next_generation:
     name: 'A Horga''hn statue from Planet Risa (Star Trek: The Next Generation)'
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://memory-alpha.fandom.com/wiki/Horga%27hn
+    ref_image: horga_hn.jpg
     note: null
     coords: [O1, P1]
   g_kar_babylon_5_1993:
     name: G'Kar, Babylon 5 (1993)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://babylon5.fandom.com/wiki/G%27Kar
+    ref_image: g_kar.webp
     note: null
     coords: [O2, P1, P2, Q2, R2]
   susan_ivanova_babylon_5_1993:
     name: Susan Ivanova, Babylon 5 (1993)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://babylon5.fandom.com/wiki/Susan_Ivanova
+    ref_image: susan_ivanova.jpg
     note: null
     coords: [O3, P2, P3, Q3, R3]
   chiana_farscape_1999:
@@ -2466,7 +2466,7 @@ entities:
   little_fuzzy_little_fuzzy_books_by_h_beam_piper_1962:
     name: Little Fuzzy, Little Fuzzy books by H. Beam Piper (1962)
     aliases: []
-    ref_url: null
+    ref_url: https://www.gutenberg.org/ebooks/18137
     ref_image: little_fuzzy.jpg
     note: Image composed of two references. Stitched here in one image.
     coords: [P4, P5, Q4, Q5, R5]
