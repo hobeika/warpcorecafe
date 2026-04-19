@@ -2158,8 +2158,8 @@ entities:
   thermian_bartender_galaxy_quest_1999:
     name: Thermian bartender, Galaxy Quest (1999)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://galaxyquest.fandom.com/wiki/Thermian
+    ref_image: thermians.png
     note: null
     coords: [N1, O1]
   fishy_joe_popplers_futurama:
