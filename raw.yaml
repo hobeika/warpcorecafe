@@ -2116,8 +2116,8 @@ entities:
   quark_bar_tending_star_trek_deep_space_nine_1993_1999:
     name: Quark bar tending, Star Trek Deep Space Nine (1993-1999)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://memory-alpha.fandom.com/wiki/Quark
+    ref_image: quark_bar_tending.jpg
     note: null
     coords: [M3, M4, N3, N4]
   rick_deckard_blade_runner_1982:
