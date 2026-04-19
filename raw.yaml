@@ -2186,8 +2186,8 @@ entities:
   young_jrrr_of_the_planet_omicron_persei_8_futurama:
     name: Young Jrrr of the planet Omicron Persei 8, Futurama
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://futurama.fandom.com/wiki/Jrrr
+    ref_image: young_jrrr.jpg
     note: null
     coords: [N3, O3]
   londo_mollari_babylon_5_1993:
