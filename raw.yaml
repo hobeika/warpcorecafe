@@ -2161,26 +2161,26 @@ entities:
     ref_url: https://galaxyquest.fandom.com/wiki/Thermian
     ref_image: thermians.png
     note: null
-    coords: [M1, N1, O1, M2, N2, O2]
+    coords: [N1, O1, M2, N2, O2, P1]
   fishy_joe_popplers_futurama:
     name: Fishy Joe Popplers, Futurama
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://futurama.fandom.com/wiki/Popplers
+    ref_image: fishy_joe_popplers.jpg
     note: null
     coords: [N1, O1]
   donald_kessler_head_mars_attacks_1996:
     name: Donald Kessler head, Mars Attacks! (1996)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://timburton.fandom.com/wiki/Donald_Kessler
+    ref_image: donald_kessler_head.jpg
     note: null
     coords: [N1, N2, O2]
   natalie_lake_dog_hybrid_mars_attacks_1996:
     name: Natalie Lake / dog hybrid, Mars Attacks! (1996)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://timburton.fandom.com/wiki/Nathalie_Lake
+    ref_image: natalie_lake_dog_hybrid.jpg
     note: null
     coords: [N2, N3, O2, O3]
   young_jrrr_of_the_planet_omicron_persei_8_futurama:
