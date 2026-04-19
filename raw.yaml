@@ -2109,8 +2109,8 @@ entities:
   gizmo_mogwai_gremlins_1984:
     name: Gizmo mogwai, Gremlins (1984)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://gremlins.fandom.com/wiki/Gizmo
+    ref_image: gizmo.jpg
     note: null
     coords: [M3, N2, N3]
   quark_bar_tending_star_trek_deep_space_nine_1993_1999:
