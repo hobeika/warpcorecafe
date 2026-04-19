@@ -2161,7 +2161,7 @@ entities:
     ref_url: https://galaxyquest.fandom.com/wiki/Thermian
     ref_image: thermians.png
     note: null
-    coords: [N1, O1]
+    coords: [M1, N1, O1, M2, N2, O2]
   fishy_joe_popplers_futurama:
     name: Fishy Joe Popplers, Futurama
     aliases: []
