@@ -2627,10 +2627,10 @@ entities:
   frank_the_pug_men_in_black:
     name: Frank the Pug, Men In Black
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://total-movies.fandom.com/wiki/Frank_the_Pug
+    ref_image: Frank_the_Pug.webp
     note: null
-    coords: [R1]
+    coords: [Q1, R1]
   jeff_carlisle_logo:
     name: Jeff Carlisle logo
     aliases: []
