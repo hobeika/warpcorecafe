@@ -2249,10 +2249,10 @@ entities:
   yoda_star_wars:
     name: Yoda, Star Wars
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://starwars.fandom.com/wiki/Yoda
+    ref_image: yoda.jpg
     note: null
-    coords: [N9, O8, O9]
+    coords: [N9, O8, O9, P8, P9]
   rocket_raccoon_guardians_of_the_galaxy:
     name: Rocket Raccoon, Guardians of the Galaxy
     aliases: []
@@ -2417,10 +2417,10 @@ entities:
   maz_kanata_with_luke_skywalker_s_lightsaber_star_wars:
     name: Maz Kanata with Luke Skywalker's lightsaber (Star Wars)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://starwars.fandom.com/wiki/Maz_Kanata
+    ref_image: maz_kanata.jpg
     note: null
-    coords: [O10]
+    coords: [O9, N10, O10, P10]
   plif_the_hoojib_star_wars_1980s_marvel_comics:
     name: Plif the Hoojib, Star Wars 1980s Marvel comics
     aliases: []
