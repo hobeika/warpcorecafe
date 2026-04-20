@@ -15,12 +15,15 @@ OUTPUT_PATH = ROOT / "index.html"
 TITLE = "Warp Core Cafe Character List"
 SUBTITLE = "Jeff Carlisle painting reference"
 IMGUR_URL = "https://imgur.com/t/warp_core_cafe"
+PROJECT_URL = "https://github.com/users/hobeika/projects/1/views/1"
 GRID_IMAGE_NAME = "wpc.jpg"
 GRID_IMAGE_WIDTH = 1217
 GRID_IMAGE_HEIGHT = 1800
 REFERENCE_IMAGE_DIR = "references"
 DETAIL_IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 ARTIST_NAME = "Jeff Carlisle"
+IDENTIFICATION_TOTAL = 286
+IDENTIFICATION_DONE = 31
 ARTIST_BIO = [
     (
         "A lifelong science-fiction and fantasy fan, Jeff Carlisle traces the start of "
@@ -411,6 +414,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
     rows = group_tiles(tiles)
     total_tiles = len(tiles)
     total_items = sum(len(tile["items"]) for tile in tiles)
+    identification_percent = (IDENTIFICATION_DONE / IDENTIFICATION_TOTAL) * 100
     max_column = max(
         int(re.search(r"\d+", str(tile["coord"])).group(0))
         for row in rows.values()
@@ -500,6 +504,72 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         margin: 0.5rem 0 0;
         color: var(--muted);
         font-size: 1rem;
+      }}
+
+      .progress-card {{
+        margin-top: 1rem;
+        padding: 0.95rem 1rem;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        background: rgba(255, 250, 242, 0.9);
+        box-shadow: var(--shadow);
+      }}
+
+      .progress-card strong {{
+        display: block;
+        margin-bottom: 0.35rem;
+        font-size: 0.98rem;
+      }}
+
+      .progress-card p {{
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }}
+
+      .progress-bar {{
+        margin-top: 0.8rem;
+        height: 0.85rem;
+        border-radius: 999px;
+        background: rgba(125, 75, 46, 0.12);
+        overflow: hidden;
+      }}
+
+      .progress-bar span {{
+        display: block;
+        height: 100%;
+        width: var(--progress);
+        border-radius: inherit;
+        background: linear-gradient(90deg, #9c6037 0%, #7d4b2e 100%);
+      }}
+
+      .progress-meta {{
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: baseline;
+        margin-top: 0.55rem;
+        font-variant-numeric: tabular-nums;
+      }}
+
+      .progress-meta span {{
+        color: var(--muted);
+        font-size: 0.88rem;
+      }}
+
+      .progress-link {{
+        display: inline-flex;
+        align-items: center;
+        margin-top: 0.75rem;
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 0.9rem;
+      }}
+
+      .progress-link:hover,
+      .progress-link:focus-visible {{
+        text-decoration: underline;
+        outline: none;
       }}
 
       .summary {{
@@ -1224,6 +1294,18 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       <header class="hero">
         <h1>{escape(TITLE)}</h1>
         <p>{escape(SUBTITLE)}. Search by tile, character, ship, show, or franchise.</p>
+        <section class="progress-card" aria-label="Work in progress status">
+          <strong>Work in progress</strong>
+          <p>This catalogue is still being identified tile by tile. There are {IDENTIFICATION_TOTAL} references to document, and {IDENTIFICATION_DONE} have been properly identified so far.</p>
+          <div class="progress-bar" aria-hidden="true" style="--progress:{identification_percent:.2f}%;">
+            <span></span>
+          </div>
+          <div class="progress-meta">
+            <span>{IDENTIFICATION_DONE} / {IDENTIFICATION_TOTAL} identified</span>
+            <span>{identification_percent:.1f}% complete</span>
+          </div>
+          <a class="progress-link" href="{escape(PROJECT_URL)}" target="_blank" rel="noreferrer">Open the identification project board</a>
+        </section>
       </header>
 
       <section class="controls">

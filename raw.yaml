@@ -2200,8 +2200,8 @@ entities:
   baby_groot_guardians_of_the_galaxy_vol_2:
     name: Baby Groot (Guardians of the Galaxy Vol 2)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://marvelcinematicuniverse.fandom.com/wiki/Groot
+    ref_image: baby_groot.jpg
     note: null
     coords: [N4]
   neeble_annelid_aliens_worm_guys_men_in_black_1997:
