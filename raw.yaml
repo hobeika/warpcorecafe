@@ -2221,15 +2221,15 @@ entities:
   prawn_christopher_johnson_son_district_9_2009:
     name: '"prawn" Christopher Johnson & son, District 9 (2009)'
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://district9.fandom.com/wiki/Christopher_Johnson
+    ref_image: prawn.jpg
     note: null
-    coords: [N7, O7]
+    coords: [N6, O6, M7, N7, O7]
   teddy_ai_artificial_intelligence_2001:
     name: 'Teddy, AI: Artificial Intelligence (2001)'
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://warnerbros.fandom.com/wiki/A.I._Artificial_Intelligence
+    ref_image: teddy.jpg
     note: null
     coords: [N7, N8, O7, O8]
   rick_s_portal_gun_rick_and_morty:
