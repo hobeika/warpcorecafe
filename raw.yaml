@@ -1927,8 +1927,8 @@ entities:
   guinan_bar_tending_star_trek_the_next_generation:
     name: Guinan bar tending, Star Trek The Next Generation
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://memory-alpha.fandom.com/es/wiki/Guinan
+    ref_image: Guinan_and_Ro_Laren_(2368).webp
     note: null
     coords: [L5, L6, M5, M6]
   h_a_l_9000_2001_a_space_odyssey:
@@ -1955,7 +1955,7 @@ entities:
   inara_serra_firefly_serenity_2005:
     name: Inara Serra, Firefly/Serenity (2005)
     aliases: []
-    ref_url: null
+    ref_url: https://firefly.fandom.com/wiki/Inara_Serra
     ref_image: inara_serra.jpg
     note: null
     coords: [L6, M6, N6, O6, M7, N7]
@@ -1969,8 +1969,8 @@ entities:
   gigolo_joe_ai_artificial_intelligence_2001:
     name: 'Gigolo Joe, AI: Artificial Intelligence (2001)'
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://warnerbros.fandom.com/wiki/A.I._Artificial_Intelligence
+    ref_image: gigolo_joe.jpg
     note: null
     coords: [L7, M7, N7]
   princess_aura_flash_gordon_1980_source:
@@ -2123,14 +2123,14 @@ entities:
   rick_deckard_blade_runner_1982:
     name: Rick Deckard, Blade Runner (1982)
     aliases: []
-    ref_url: null
+    ref_url: https://bladerunner.fandom.com/wiki/Rick_Deckard
     ref_image: rick_deckard.jpg
     note: null
     coords: [M4, M5, N4, N5, O4, O5]
   rachael_tyrell_blade_runner_1982:
     name: Rachael Tyrell, Blade Runner (1982)
     aliases: []
-    ref_url: null
+    ref_url: https://bladerunner.fandom.com/wiki/Rachael
     ref_image: rachael_tyrell.jpg
     note: null
     coords: [M5, M6, N5, N6, O5, O6]
@@ -2354,10 +2354,10 @@ entities:
   mse_6_series_repair_droid_star_wars:
     name: MSE-6 series repair droid, Star Wars
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://starwars.fandom.com/wiki/MSE-6_series_repair_droid
+    ref_image: mse-6.webp
     note: null
-    coords: [O5]
+    coords: [O5, O6]
   bib_fortuna_return_of_the_jedi_1983:
     name: Bib Fortuna, Return of the Jedi (1983)
     aliases: []
