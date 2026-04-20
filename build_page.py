@@ -23,7 +23,7 @@ REFERENCE_IMAGE_DIR = "references"
 DETAIL_IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 ARTIST_NAME = "Jeff Carlisle"
 IDENTIFICATION_TOTAL = 286
-IDENTIFICATION_DONE = 31
+IDENTIFICATION_DONE = 45
 ARTIST_BIO = [
     (
         "A lifelong science-fiction and fantasy fan, Jeff Carlisle traces the start of "
@@ -80,7 +80,9 @@ def load_catalog(path: Path) -> list[dict[str, object]]:
             if str(alias).strip()
         ]
         ref_url = str(entity.get("ref_url") or "").strip()
-        ref_image = normalize_ref_image(str(entity.get("ref_image") or "").strip())
+        ref_image = normalize_ref_image(
+            str(entity.get("ref_image") or "").strip()
+        )
         coords = [
             str(coord).strip()
             for coord in entity.get("coords", [])

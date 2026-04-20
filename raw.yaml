@@ -1378,13 +1378,13 @@ entities:
     ref_image: null
     note: null
     coords: [J1, K1]
-  a_porg_star_wars:
-    name: A Porg (Star Wars)
+  a_porg_upper_deck_star_wars:
+    name: A Porg (upper deck), Star Wars
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://starwars.fandom.com/wiki/Porg
+    ref_image: porg_upper_deck.jpeg
     note: null
-    coords: [J2, O13, P13, Q13]
+    coords: [J2, K2]
   a_tribble_star_trek:
     name: A Tribble (Star Trek)
     aliases: []
@@ -2277,10 +2277,10 @@ entities:
   paul_alien_paul:
     name: Paul alien, Paul
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://extraterrestrials.fandom.com/wiki/Paul
+    ref_image: paul_alien.webp
     note: null
-    coords: [N10]
+    coords: [N10, O10, P10, N11, O11, P11]
   gordon_shumway_alf:
     name: Gordon Shumway, ALF
     aliases: []
@@ -2291,9 +2291,9 @@ entities:
   howard_the_duck_howard_the_duck_guardians_of_the_galaxy:
     name: Howard the Duck, Howard the Duck & Guardians of the Galaxy
     aliases: []
-    ref_url: null
-    ref_image: null
-    note: null
+    ref_url: https://marvelcinematicuniverse.fandom.com/wiki/Howard_the_Duck
+    ref_image: howard_the_duck.webp
+    note: Guardians of the Galaxy Vol.2
     coords: [N11, O11]
   gaff_s_unicorn_origami_blade_runner:
     name: Gaff's unicorn origami, Blade Runner
@@ -2305,10 +2305,17 @@ entities:
   father_kilowatt_fix_it_batteries_not_included_1987:
     name: Father (Kilowatt) "Fix-It", Batteries Not Included (1987)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://batteriesnotincluded.fandom.com/wiki/Kilowatt
+    ref_image: kilowatt.webp
     note: null
-    coords: [N12, O12]
+    coords: [N11, O11, N12, O12, N13, O13]
+  a_porg_ground_floor_star_wars_O13Q13:
+    name: A Porg (ground floor), Star Wars
+    aliases: []
+    ref_url: https://starwars.fandom.com/wiki/Porg
+    ref_image: porg_ground_floor.webp
+    note: null
+    coords: [O13, P13, Q13]
   the_great_gazoo_the_flintstones_1965:
     name: The Great Gazoo, The Flintstones (1965)
     aliases: []
@@ -2424,17 +2431,17 @@ entities:
   plif_the_hoojib_star_wars_1980s_marvel_comics:
     name: Plif the Hoojib, Star Wars 1980s Marvel comics
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://starwars.fandom.com/wiki/Plif
+    ref_image: hoojib.jpg
     note: null
     coords: [O11, P11]
   mother_carmen_fix_it_batteries_not_included_1987:
     name: Mother (Carmen) "Fix-It", Batteries Not Included (1987)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://batteriesnotincluded.fandom.com/wiki/Carmen
+    ref_image: carmen.webp
     note: null
-    coords: [O12, P11, P12, P13]
+    coords: [O11, O12, O13, P11, P12, P13]
   merlin_toy:
     name: Merlin toy
     aliases: []
@@ -2515,8 +2522,8 @@ entities:
   wheems_fix_it_batteries_not_included_1987:
     name: Wheems "Fix-It", Batteries Not Included (1987)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://batteriesnotincluded.fandom.com/wiki/Wheems
+    ref_image: wheems.webp
     note: null
     coords: [P11, P12, Q11, Q12]
   puckmaren_flight_of_the_navigator_1986:
@@ -2599,10 +2606,10 @@ entities:
   jetsam_fix_it_batteries_not_included_1987:
     name: Jetsam "Fix-It", Batteries Not Included (1987)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://batteriesnotincluded.fandom.com/wiki/Jetsam
+    ref_image: jestam.webp
     note: null
-    coords: [Q12, Q13, R13]
+    coords: [Q12, Q13, R12, R13]
   princess_mari_marionette_the_micronauts:
     name: Princess Mari (Marionette), The Micronauts
     aliases: []
@@ -2648,7 +2655,7 @@ entities:
   flotsam_fix_it_batteries_not_included_1987:
     name: Flotsam "Fix-It", Batteries Not Included (1987)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://batteriesnotincluded.fandom.com/wiki/Flotsam
+    ref_image: flotsam.webp
     note: null
-    coords: [R13]
+    coords: [Q13, R13]
