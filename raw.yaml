@@ -2242,10 +2242,10 @@ entities:
   e_t:
     name: E.T.
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://ettheextraterrestrial.fandom.com/wiki/E.T.
+    ref_image: e.t.webp
     note: null
-    coords: [N9]
+    coords: [N8, N9, O8]
   yoda_star_wars:
     name: Yoda, Star Wars
     aliases: []
