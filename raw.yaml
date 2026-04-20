@@ -2343,7 +2343,7 @@ entities:
     ref_url: https://babylon5.fandom.com/wiki/G%27Kar
     ref_image: g_kar.webp
     note: null
-    coords: [O2, P1, P2, Q2, R2]
+    coords: [O1, O2, P1, P2, Q2, R2, O3, P3]
   susan_ivanova_babylon_5_1993:
     name: Susan Ivanova, Babylon 5 (1993)
     aliases: []
@@ -2459,7 +2459,7 @@ entities:
   mork_mork_and_mindy_1978:
     name: Mork, Mork and Mindy (1978)
     aliases: []
-    ref_url: null
+    ref_url: https://morkandmindy.fandom.com/wiki/Mork
     ref_image: mork-mindy.webp
     note: null
     coords: [P2, Q2, Q3, R2]
@@ -2543,10 +2543,10 @@ entities:
   k_9_doctor_who:
     name: K-9, Doctor Who
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://tardis.fandom.com/wiki/K9
+    ref_image: k-9.jpg
     note: null
-    coords: [Q1, R1]
+    coords: [Q1, R1, Q2, R2]
   doctor_zira_planet_of_the_apes_1968:
     name: Doctor Zira, Planet of the Apes (1968)
     aliases: []
