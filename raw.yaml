@@ -1988,12 +1988,12 @@ entities:
     note: null
     coords: [L8]
   jessica_atreides_dune:
-    name: Jessica Atreides (Dune)
+    name: Lady Jessica Atreides, DUNE (1984)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://dune.fandom.com/wiki/Jessica_Atreides/1984_film
+    ref_image: jessica_atreides.webp
     note: null
-    coords: [L9]
+    coords: [L9, M9, N9]
   starfleet_communicator_on_the_floor:
     name: Starfleet communicator (on the floor)
     aliases: []
