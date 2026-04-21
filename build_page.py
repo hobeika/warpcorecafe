@@ -198,32 +198,6 @@ def discover_detail_regions(
     return detail_regions
 
 
-def discover_detail_images(
-    rows: OrderedDict[str, list[dict[str, object]]],
-) -> dict[str, list[dict[str, str]]]:
-    detail_map: dict[str, list[dict[str, str]]] = {}
-
-    rows_by_index = {
-        index: row for index, row in enumerate(rows.keys(), start=1)
-    }
-
-    for region in discover_detail_regions(rows):
-        for row_index in range(
-            int(region["start_row"]), int(region["end_row"]) + 1
-        ):
-            row = rows_by_index[row_index]
-            for column in range(
-                int(region["start_column"]), int(region["end_column"]) + 1
-            ):
-                coord = f"{row}{column}"
-                detail_map.setdefault(coord, []).append(
-                    {
-                        "href": str(region["href"]),
-                        "label": str(region["label"]),
-                    }
-                )
-
-    return detail_map
 
 
 def render_reference_map(
@@ -382,7 +356,6 @@ def render_rows(
     tile_aspect_ratio = (GRID_IMAGE_WIDTH * total_rows) / (
         GRID_IMAGE_HEIGHT * max_column
     )
-    detail_images = discover_detail_images(rows)
 
     for row_index, (row, tiles) in enumerate(rows.items(), start=1):
         cards = []
@@ -401,17 +374,6 @@ def render_rows(
             )
             count = len(tile["items"])
             label = "entry" if count == 1 else "entries"
-            detail_links = detail_images.get(coord_raw, [])
-            detail_actions = ""
-            if detail_links:
-                links = "\n".join(
-                    f'                <a class="detail-link" href="{escape(asset_href(detail["href"]))}" target="_blank" rel="noreferrer">Open high-detail {escape(detail["label"])}</a>'
-                    for detail in detail_links
-                )
-                detail_actions = f"""
-              <div class="tile-detail-actions">
-{links}
-              </div>"""
             cards.append(
                 f"""          <article class="tile-card" id="tile-{coord.lower()}" data-coord="{coord}" data-search="{escape(search_text)}" style="--tile-column:{column}; --tile-row:{row_index}; --tile-columns:{max_column}; --tile-rows:{total_rows}; --tile-aspect:{tile_aspect_ratio:.6f}; --tile-offset-x:{offset_x}%; --tile-offset-y:{offset_y}%;">
             <div class="tile-head">
@@ -429,7 +391,6 @@ def render_rows(
                   <img src="{escape(asset_href(GRID_IMAGE_NAME))}" alt="">
                 </div>
                 <p>Zoomed view of {coord}</p>
-{detail_actions}
               </aside>
             </div>
           </article>"""
@@ -1138,26 +1099,6 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         text-align: center;
       }}
 
-      .tile-detail-actions {{
-        display: grid;
-        gap: 0.45rem;
-      }}
-
-      .detail-link {{
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 2.5rem;
-        padding: 0.6rem 0.8rem;
-        border-radius: 12px;
-        background: rgba(125, 75, 46, 0.1);
-        border: 1px solid rgba(125, 75, 46, 0.22);
-        text-decoration: none;
-        font-size: 0.88rem;
-        line-height: 1.3;
-        text-align: center;
-      }}
-
       .tile-card.targeted {{
         border-color: rgba(125, 75, 46, 0.6);
         box-shadow: 0 0 0 3px rgba(125, 75, 46, 0.14);
@@ -1401,7 +1342,6 @@ def build_html(tiles: list[dict[str, object]]) -> str:
                 <img src="{escape(asset_href(GRID_IMAGE_NAME))}" alt="">
               </div>
               <p class="entity-focus-preview-label" id="entity-focus-preview-label"></p>
-              <div class="tile-detail-actions" id="entity-focus-actions" hidden></div>
             </aside>
           </div>
         </section>
@@ -1438,7 +1378,6 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       const entityFocusPreview = document.querySelector("#entity-focus-preview");
       const entityFocusPreviewImage = document.querySelector("#entity-focus-preview img");
       const entityFocusPreviewLabel = document.querySelector("#entity-focus-preview-label");
-      const entityFocusActions = document.querySelector("#entity-focus-actions");
       const totalColumns = {max_column};
       const totalRows = {total_rows};
       const rowOrder = {{{row_order_js}}};
@@ -1688,10 +1627,6 @@ def build_html(tiles: list[dict[str, object]]) -> str:
             ? `${{previewBounds.isRegion ? "Region" : "Tile"}} ${{previewBounds.startCoord}}${{previewBounds.endCoord !== previewBounds.startCoord ? ` to ${{previewBounds.endCoord}}` : ""}} · selected tile ${{preferredCoord}}${{previewBounds.detailLabel ? ` · detail ${{previewBounds.detailLabel}}` : ""}}`
             : `Selected tile ${{preferredCoord}}`
           : "";
-
-        const detailActions = card.querySelector(".tile-detail-actions");
-        entityFocusActions.innerHTML = detailActions ? detailActions.innerHTML : "";
-        entityFocusActions.hidden = !detailActions;
 
         entityFocusMeta.textContent = coords.length
           ? `${{coords.length}} tile${{coords.length === 1 ? "" : "s"}} highlighted on the map`
