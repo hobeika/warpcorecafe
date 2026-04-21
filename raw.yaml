@@ -1756,13 +1756,20 @@ entities:
     ref_image: null
     note: null
     coords: [K10]
+  beverly_crusher_star_trek:
+    name: Beverly Crusher, Star Trek The Next Generation Season 6
+    aliases: []
+    ref_url: https://memory-alpha.fandom.com/wiki/Officer
+    ref_image: beverly_crusher.webp
+    note: 'The reference is a cosplay of Beverly Crusher from Star Trek: The Next Generation Season 6'
+    coords: [K10, K11, L11]
   james_t_kirk_star_trek_tos:
     name: 'James T. Kirk (Star Trek: TOS)'
     aliases: []
     ref_url: null
     ref_image: null
     note: null
-    coords: [K10]
+    coords: [K11, L11]
   drac_jeriba_and_zammis_enemy_mine:
     name: Drac Jeriba and Zammis (Enemy Mine)
     aliases: []
@@ -1999,7 +2006,7 @@ entities:
     aliases: []
     ref_url: https://en.wikipedia.org/wiki/Starlog
     ref_image: starlog.jpg
-    note: null
+    note: Cover of Starlog Number 1, featuring Kirk, Spock, and the USS Enterprise from Star Trek
     coords: [ M8, M9]
   jessica_atreides_dune:
     name: Lady Jessica Atreides, DUNE (1984)
@@ -2051,12 +2058,12 @@ entities:
     note: null
     coords: [L10]
   mara_jade_star_wars:
-    name: Mara Jade (Star Wars)
+    name: Mara Jade, Star Wars
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://starwars.fandom.com/wiki/Mara_Jade_Skywalker
+    ref_image: mara_jade.webp
     note: null
-    coords: [L10]
+    coords: [L11, M11]
   r2_d2_star_wars:
     name: R2-D2 (Star Wars)
     aliases: []
@@ -2150,13 +2157,6 @@ entities:
     coords: [M5, M6, N5, N6, O5, O6]
   krite_critters:
     name: Krite, Critters
-    aliases: []
-    ref_url: null
-    ref_image: null
-    note: null
-    coords: [M8]
-  cover_of_starlog_number_1_featuring_kirk_spock_and_the_uss_enterprise_from_star_trek:
-    name: Cover of Starlog Number 1, featuring Kirk, Spock, and the USS Enterprise from Star Trek
     aliases: []
     ref_url: null
     ref_image: null
