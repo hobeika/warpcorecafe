@@ -23,7 +23,7 @@ REFERENCE_IMAGE_DIR = "references"
 DETAIL_IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 ARTIST_NAME = "Jeff Carlisle"
 IDENTIFICATION_TOTAL = 286
-IDENTIFICATION_DONE = 45
+IDENTIFICATION_DONE = 51
 ARTIST_BIO = [
     (
         "A lifelong science-fiction and fantasy fan, Jeff Carlisle traces the start of "
