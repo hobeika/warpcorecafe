@@ -750,12 +750,13 @@ entities:
     note: null
     coords: [G13]
   bo_mighty_orbots:
-    name: Bo (Mighty Orbots)
+    name: Bo, Mighty Orbots (1984)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://mighty-orbots.fandom.com/wiki/Bo
+    ref_image: bo.jpg
     note: null
-    coords: [H1]
+    coords: [H1, I1, J1]
+    detail_region: A1R13
   barbarella_barbarella:
     name: Barbarella, Barbarella (1968)
     aliases: []
@@ -1119,14 +1120,15 @@ entities:
     note: null
     coords: [H12]
   ohno_mighty_orbots:
-    name: Ohno, (Mighty Orbots)
+    name: Ohno Robotti, Mighty Orbots (1984)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://mighty-orbots.fandom.com/wiki/Ohno
+    ref_image: Ohno_Robotti.jpg
+    detail_region: A1R13
     note: null
-    coords: [I1]
+    coords: [I1, J1]
   skeletor_heman_and_the_masters_of_the_universe:
-    name: Skeletor (HeMan and the Masters of the Universe)
+    name: Skeletor, Masters of the Universe (1982)
     aliases: []
     ref_url: https://he-man.fandom.com/wiki/Skeletor
     ref_image: skeletor.webp
