@@ -763,12 +763,13 @@ entities:
     note: null
     coords: [H1]
   ted_theodore_logan_bill_s_preston_esq_of_the_wyld_stallyns_bill_ted_s_excellent_adventure_1989:
-    name: Ted Theodore Logan & Bill S. Preston Esq. of the 'Wyld Stallyns' (Bill & Ted's Excellent Adventure, 1989)
+    name: Bill S Preston & Ted Theodore Logan, Bill and Ted's Excellent Adventure (1989)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://billandted.fandom.com/wiki/Bill_%26_Ted%27s_Excellent_Adventure
+    ref_image: bill_and_ted.jpg
     note: null
-    coords: [H1]
+    coords: [G1, H1]
+    detail_region: A1R13
   silica_starchaser_the_legend_of_orin_1985:
     name: 'Silica, Starchaser: The Legend of Orin (1985)'
     aliases: []
@@ -939,6 +940,7 @@ entities:
     ref_image: null
     note: null
     coords: [H8]
+    detail_region: A1R13
   future_ai_ai_artificial_intelligence_2001:
     name: 'Future AI, AI: Artificial Intelligence (2001)'
     aliases: []
@@ -946,6 +948,7 @@ entities:
     ref_image: null
     note: null
     coords: [H8]
+    detail_region: A1R13
   b_9_robot_lost_in_space_1965:
     name: B-9 Robot, Lost in Space (1965)
     aliases: []
@@ -953,6 +956,7 @@ entities:
     ref_image: null
     note: null
     coords: [H8]
+    detail_region: A1R13
   rambler_series_robot_lost_in_space_1998:
     name: Rambler Series Robot, Lost in Space (1998)
     aliases: []
@@ -960,6 +964,7 @@ entities:
     ref_image: null
     note: null
     coords: [H8]
+    detail_region: A1R13
   gort_the_day_the_earth_stood_still_1951:
     name: Gort, The Day the Earth Stood Still (1951)
     aliases: []
@@ -967,6 +972,7 @@ entities:
     ref_image: null
     note: null
     coords: [H8]
+    detail_region: A1R13
   robot_lost_in_space_2018:
     name: Robot, Lost in Space (2018)
     aliases: []
@@ -974,6 +980,7 @@ entities:
     ref_image: null
     note: null
     coords: [H9]
+    detail_region: A1R13
   robby_the_robot_forbidden_planet:
     name: Robby the Robot (Forbidden Planet)
     aliases: []
@@ -981,6 +988,7 @@ entities:
     ref_image: null
     note: null
     coords: [H9]
+    detail_region: A1R13
   verda_the_android_lost_in_space_1965:
     name: Verda the Android, Lost in Space (1965)
     aliases: []
@@ -988,6 +996,7 @@ entities:
     ref_image: null
     note: null
     coords: [H9]
+    detail_region: A1R13
   jawa_star_wars:
     name: Jawa, Star Wars
     aliases: []
@@ -995,6 +1004,7 @@ entities:
     ref_image: null
     note: null
     coords: [H9]
+    detail_region: A1R13
   body_of_borg_queen_star_trek_first_contact:
     name: Body of Borg Queen, Star Trek First Contact
     aliases: []
@@ -1002,6 +1012,7 @@ entities:
     ref_image: null
     note: null
     coords: [H9]
+    detail_region: A1R13
   marvin_the_hitchhiker_s_guide_to_the_galaxy_film:
     name: Marvin, The Hitchhiker's Guide to the Galaxy (film)
     aliases: []
@@ -1009,6 +1020,7 @@ entities:
     ref_image: null
     note: null
     coords: [H9]
+    detail_region: A1R13
   lawgiver_statue_planet_of_the_apes:
     name: Lawgiver Statue, Planet of the Apes
     aliases: []
@@ -1016,6 +1028,7 @@ entities:
     ref_image: null
     note: null
     coords: [H10]
+    detail_region: A1R13
   cheetara_and_lion_o_thundercats:
     name: Cheetara and Lion-O, Thundercats
     aliases: []
@@ -1023,6 +1036,7 @@ entities:
     ref_image: null
     note: null
     coords: [H10]
+    detail_region: A1R13
   sith_statue_star_wars_revenge_of_the_sith:
     name: Sith Statue, Star Wars Revenge of the Sith
     aliases: []
@@ -1030,6 +1044,7 @@ entities:
     ref_image: null
     note: null
     coords: [H10]
+    detail_region: A1R13
   yip_yip_alien_sesame_street:
     name: Yip Yip Alien, Sesame Street
     aliases: []
@@ -1037,13 +1052,15 @@ entities:
     ref_image: null
     note: null
     coords: [H10]
+    detail_region: A1R13
   atreides_space_ship_dune:
-    name: Atreides Space Ship, DUNE
+    name: Guild Transport landing Craft (Atreides), DUNE (1984)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://dune.fandom.com/wiki/Starship
+    ref_image: atreides_space_ship.webp
     note: null
-    coords: [H10, H11]
+    coords: [G10, G11, H10, H11]
+    detail_region: A1R13 (outdoor)
   starfleet_shuttlecraft_star_trek:
     name: Starfleet shuttlecraft (Star Trek)
     aliases: []
@@ -1368,12 +1385,13 @@ entities:
     note: null
     coords: [I12]
   korben_dallas_the_fifth_element:
-    name: Korben Dallas, The Fifth Element
+    name: Korben Dallas, The Fifth Element (1997)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://fifth-element.fandom.com/wiki/Korben_Dallas
+    ref_image: korben.jpg
     note: null
     coords: [I13]
+    detail_region: A1R13 (outdoor)
   zorak_space_ghost_coast_to_coast:
     name: Zorak, Space Ghost Coast to Coast
     aliases: []
