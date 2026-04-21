@@ -1885,8 +1885,8 @@ entities:
   max_headroom_on_tv_screen:
     name: Max Headroom (on TV screen)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://en.wikipedia.org/wiki/Max_Headroom
+    ref_image: max_headroom.jpg
     note: null
     coords: [L3]
   saurian_brandy_bottle_star_trek:
