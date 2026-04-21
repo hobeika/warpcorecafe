@@ -76,13 +76,14 @@ entities:
     ref_image: null
     note: null
     coords: [A7]
-  white_star_babylon_5_also_b7:
-    name: White Star (Babylon 5) (also B7)
+  white_star_babylon_5:
+    name: White Star, Babylon 5 (1993)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://babylon5.fandom.com/wiki/White_Star_class
+    ref_image: white_star.jpg
     note: null
-    coords: [A7]
+    coords: [A7, A8, B7, B8]
+    detail_region: A1R13 (outdoor)
   romulan_bird_of_prey_star_trek_tos:
     name: 'Romulan Bird of Prey (Star Trek: TOS)'
     aliases: []
@@ -336,12 +337,12 @@ entities:
     note: null
     coords: [D2]
   imperial_probe_droid_star_wars:
-    name: Imperial Probe Droid (Star Wars)
+    name: Imperial Probe Droid, Star Wars
     aliases: []
-    ref_url: null
-    ref_image: null
-    note: null
-    coords: [D3]
+    ref_url: https://starwars.fandom.com/wiki/Viper_probe_droid
+    ref_image: viper_probe_droid.jpg
+    note: The Viper probe droid, commonly referred to as the Imperial probe droid, was a model of probe droid manufactured by Arakyd Industries.
+    coords: [D3, D4, E3, E4, F3, F4]
   close_encounters_of_the_third_kind_mothership_also_d5:
     name: Close Encounters of the Third Kind mothership (also D5)
     aliases: []
@@ -756,12 +757,12 @@ entities:
     note: null
     coords: [H1]
   barbarella_barbarella:
-    name: Barbarella (Barbarella)
+    name: Barbarella, Barbarella (1968)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://scifi.fandom.com/wiki/Barbarella_(film)
+    ref_image: barbarella.jpg
     note: null
-    coords: [H1]
+    coords: [H1, I1, J1, K1, H2, I2, J2, K2]
   ted_theodore_logan_bill_s_preston_esq_of_the_wyld_stallyns_bill_ted_s_excellent_adventure_1989:
     name: Bill S Preston & Ted Theodore Logan, Bill and Ted's Excellent Adventure (1989)
     aliases: []
@@ -1132,19 +1133,20 @@ entities:
     note: null
     coords: [I1]
   marta_orion_slave_girl_star_trek_tos_whom_gods_destroy_also_j3:
-    name: 'Marta, Orion slave girl (Star Trek: TOS, "Whom Gods Destroy") [Also J3]'
+    name: 'Marta, Orion slave girl (Star Trek: TOS, "Whom Gods Destroy")'
     aliases: []
     ref_url: null
-    ref_image: null
+    ref_image: marta_orion.jpg
     note: null
-    coords: [I3]
+    coords: [I2, J2, K2, I3, J3, K3, I4, J4, K4]
+    detail_region: A1R13
   twiki_buck_rogers_2:
     name: Twiki, Buck Rogers
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://buckrogers.fandom.com/wiki/Twiki
+    ref_image: twiki.jpg
     note: null
-    coords: [I4]
+    coords: [H4, I3, I4, J4]
   a_bith_the_new_essential_guide_to_alien_species_original_artist_william_o_connor_star_wars:
     name: A Bith, The New Essential Guide to Alien Species (Original artist William O'Connor), Star Wars
     aliases: []
