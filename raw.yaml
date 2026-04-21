@@ -2275,12 +2275,12 @@ entities:
     note: null
     coords: [N9]
   alien_from_invasion_of_the_saucer_men:
-    name: Alien from Invasion of the Saucer-Men
+    name: Saucer Man, Invasion of the Saucer Men (1957)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://aliens.fandom.com/wiki/Saucer_Man
+    ref_image: SaucerMen.webp
     note: null
-    coords: [N9]
+    coords: [M9, N9, M10, N10]
   mac_mac_and_me_with_big_mac_and_fries_from_mcdonald_s:
     name: Mac (Mac and Me), with Big Mac and fries from McDonald's
     aliases: []
