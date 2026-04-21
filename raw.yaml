@@ -1700,13 +1700,13 @@ entities:
     ref_image: null
     note: null
     coords: [K7]
-  roth_h_ar_sarris_main_antagonist_of_galaxy_quest_also_in_l7:
-    name: Roth'h'ar Sarris, main antagonist of Galaxy Quest (also in L7)
+  roth_h_ar_sarris_main_antagonist_of_galaxy_quest:
+    name: General Roth'h'ar Sarris, Galaxy Quest (1999)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://villains.fandom.com/wiki/General_Roth%27h%27ar_Sarris
+    ref_image: sarris.jpg
     note: null
-    coords: [K7]
+    coords: [L7, K8, L8, M8, N8]
   kabe_star_wars:
     name: Kabe (Star Wars)
     aliases: []
@@ -1988,11 +1988,11 @@ entities:
     note: null
     coords: [L6]
   pampy_twi_lek_dignitary_star_wars_episode_iii_revenge_of_the_sith:
-    name: 'Pampy (Twi''lek dignitary), Star Wars: Episode III - Revenge of the Sith (2005)'
+    name: 'Pampy (Rutian Twi''lek dignitary), Star Wars: Episode III - Revenge of the Sith (2005)'
     aliases: []
     ref_url: https://starwars.fandom.com/wiki/Pampy
     ref_image: pampy_and_supy.jpg
-    note: null
+    note: Rutian referred to one of the many skin tones of the Twi'lek species, generally denoting a shade of blue.
     coords: [L8, M8, N8, L9, M9]
   starlog_magazine:
     name: STARLOG magazine
