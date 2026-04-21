@@ -1128,10 +1128,11 @@ entities:
   skeletor_heman_and_the_masters_of_the_universe:
     name: Skeletor (HeMan and the Masters of the Universe)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://he-man.fandom.com/wiki/Skeletor
+    ref_image: skeletor.webp
     note: null
     coords: [I1]
+    detail_region: A1R13
   marta_orion_slave_girl_star_trek_tos_whom_gods_destroy_also_j3:
     name: 'Marta, Orion slave girl (Star Trek: TOS, "Whom Gods Destroy")'
     aliases: []
@@ -1336,6 +1337,7 @@ entities:
     ref_image: waldo_zeptic.jpg
     note: null
     coords: [I12]
+    detail_region: A1R13
   pris_blade_runner:
     name: Pris, Blade Runner (1982)
     aliases: []
