@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import OrderedDict
 from html import escape
 from pathlib import Path
+import json
 import re
 from urllib.parse import quote
 
@@ -23,7 +24,7 @@ REFERENCE_IMAGE_DIR = "references"
 DETAIL_IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 ARTIST_NAME = "Jeff Carlisle"
 IDENTIFICATION_TOTAL = 286
-IDENTIFICATION_DONE = 58
+IDENTIFICATION_DONE = 60
 ARTIST_BIO = [
     (
         "A lifelong science-fiction and fantasy fan, Jeff Carlisle traces the start of "
@@ -88,6 +89,7 @@ def load_catalog(path: Path) -> list[dict[str, object]]:
             for coord in entity.get("coords", [])
             if str(coord).strip()
         ]
+        detail_region = str(entity.get("detail_region") or "").strip()
         search_terms = " ".join([name, *aliases, note]).strip()
         return {
             "entity_id": entity_id,
@@ -97,6 +99,7 @@ def load_catalog(path: Path) -> list[dict[str, object]]:
             "ref_url": ref_url,
             "ref_image": ref_image,
             "coords": coords,
+            "detail_region": detail_region,
             "search_terms": search_terms,
         }
 
@@ -144,11 +147,11 @@ def split_coord(coord: str) -> tuple[str, int]:
     return match.group(1), int(match.group(2))
 
 
-def discover_detail_images(
+def discover_detail_regions(
     rows: OrderedDict[str, list[dict[str, object]]],
-) -> dict[str, list[dict[str, str]]]:
-    row_order = {row: index for index, row in enumerate(rows.keys())}
-    detail_map: dict[str, list[dict[str, str]]] = {}
+) -> list[dict[str, object]]:
+    row_order = {row: index for index, row in enumerate(rows.keys(), start=1)}
+    detail_regions: list[dict[str, object]] = []
 
     for path in sorted(ROOT.iterdir()):
         if (
@@ -177,13 +180,47 @@ def discover_detail_images(
         if suffix:
             label = f"{label} {suffix}"
 
-        for row, row_index in row_order.items():
-            if not first_row <= row_index <= last_row:
-                continue
-            for column in range(first_column, last_column + 1):
+        detail_regions.append(
+            {
+                "href": path.name,
+                "name": path.name,
+                "stem": path.stem,
+                "label": label,
+                "start_row": first_row,
+                "end_row": last_row,
+                "start_column": first_column,
+                "end_column": last_column,
+                "row_span": last_row - first_row + 1,
+                "column_span": last_column - first_column + 1,
+            }
+        )
+
+    return detail_regions
+
+
+def discover_detail_images(
+    rows: OrderedDict[str, list[dict[str, object]]],
+) -> dict[str, list[dict[str, str]]]:
+    detail_map: dict[str, list[dict[str, str]]] = {}
+
+    rows_by_index = {
+        index: row for index, row in enumerate(rows.keys(), start=1)
+    }
+
+    for region in discover_detail_regions(rows):
+        for row_index in range(
+            int(region["start_row"]), int(region["end_row"]) + 1
+        ):
+            row = rows_by_index[row_index]
+            for column in range(
+                int(region["start_column"]), int(region["end_column"]) + 1
+            ):
                 coord = f"{row}{column}"
                 detail_map.setdefault(coord, []).append(
-                    {"href": path.name, "label": label}
+                    {
+                        "href": str(region["href"]),
+                        "label": str(region["label"]),
+                    }
                 )
 
     return detail_map
@@ -281,6 +318,7 @@ def render_tile_entry(entry: dict[str, object]) -> str:
     note = str(entry.get("note", "")).strip()
     ref_url = str(entry.get("ref_url", "")).strip()
     ref_image = str(entry.get("ref_image", "")).strip()
+    detail_region = escape(str(entry.get("detail_region", "")).strip())
     coords = [
         str(coord).strip()
         for coord in entry.get("coords", [])
@@ -323,7 +361,7 @@ def render_tile_entry(entry: dict[str, object]) -> str:
                     <img src="{escape(asset_href(ref_image))}" alt="Reference for {name}">
                   </a>"""
 
-    return f"""              <li class="tile-entry" data-entity-id="{entity_id}" data-entity-name="{name}">
+    return f"""              <li class="tile-entry" data-entity-id="{entity_id}" data-entity-name="{name}" data-detail-region="{detail_region}">
                 <button class="tile-entry-trigger" type="button">
                   <span class="tile-entry-name">{name}</span>
                 </button>
@@ -425,6 +463,23 @@ def build_html(tiles: list[dict[str, object]]) -> str:
     total_rows = len(rows)
     row_order_js = ", ".join(
         f'"{row}": {index}' for index, row in enumerate(rows.keys(), start=1)
+    )
+    detail_regions = discover_detail_regions(rows)
+    detail_regions_js = json.dumps(
+        [
+            {
+                "href": asset_href(str(region["href"])),
+                "name": str(region["name"]),
+                "stem": str(region["stem"]),
+                "label": str(region["label"]),
+                "startRow": int(region["start_row"]),
+                "endRow": int(region["end_row"]),
+                "startColumn": int(region["start_column"]),
+                "endColumn": int(region["end_column"]),
+                "area": int(region["row_span"]) * int(region["column_span"]),
+            }
+            for region in detail_regions
+        ]
     )
     artist_note = render_artist_note()
     reference_map = render_reference_map(rows)
@@ -1381,11 +1436,13 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       const entityFocusTitle = document.querySelector("#entity-focus-title");
       const entityFocusBody = document.querySelector("#entity-focus-body");
       const entityFocusPreview = document.querySelector("#entity-focus-preview");
+      const entityFocusPreviewImage = document.querySelector("#entity-focus-preview img");
       const entityFocusPreviewLabel = document.querySelector("#entity-focus-preview-label");
       const entityFocusActions = document.querySelector("#entity-focus-actions");
       const totalColumns = {max_column};
       const totalRows = {total_rows};
       const rowOrder = {{{row_order_js}}};
+      const detailRegions = {detail_regions_js};
       const prefersDirectManipulation = window.matchMedia("(pointer: coarse)").matches;
       const matchingCoords = new Set();
       let activeCoord = "";
@@ -1491,8 +1548,16 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         }};
       }}
 
-      function syncFocusPreview(card, coords) {{
-        if (!entityFocusPreview) {{
+      function normalizeDetailRegionName(value) {{
+        return (value || "")
+          .toLowerCase()
+          .replace(/%20/g, " ")
+          .replace(/\.(jpg|jpeg|png|webp)$/i, "")
+          .replace(/[^a-z0-9]+/g, "");
+      }}
+
+      function syncFocusPreview(card, coords, preferredRegion = "") {{
+        if (!entityFocusPreview || !entityFocusPreviewImage) {{
           return null;
         }}
 
@@ -1507,6 +1572,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
           }}
           entityFocusPreview.style.removeProperty("--focus-image-width");
           entityFocusPreview.style.removeProperty("--focus-image-height");
+          entityFocusPreviewImage.src = "{escape(asset_href(GRID_IMAGE_NAME))}";
           return null;
         }}
 
@@ -1518,12 +1584,37 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         const maxColumn = Math.max(...columns);
         const spanRows = Math.max(1, maxRow - minRow + 1);
         const spanColumns = Math.max(1, maxColumn - minColumn + 1);
-        const focusAspect = (({GRID_IMAGE_WIDTH} * totalRows * spanColumns) / ({GRID_IMAGE_HEIGHT} * totalColumns * spanRows)).toFixed(6);
-        const imageWidth = ((totalColumns / spanColumns) * 100).toFixed(6);
-        const imageHeight = ((totalRows / spanRows) * 100).toFixed(6);
-        const offsetX = (-((minColumn - 1) / spanColumns) * 100).toFixed(6);
-        const offsetY = (-((minRow - 1) / spanRows) * 100).toFixed(6);
+        const preferredRegionKey = normalizeDetailRegionName(preferredRegion);
+        const containingRegions = (preferredRegionKey
+          ? detailRegions
+              .filter((region) => region.startRow <= minRow && region.endRow >= maxRow && region.startColumn <= minColumn && region.endColumn >= maxColumn)
+              .sort((left, right) => left.area - right.area)
+          : []);
+        const matchingRegion = preferredRegionKey
+          ? containingRegions.find((region) => [region.name, region.stem, region.label].some((value) => normalizeDetailRegionName(value) === preferredRegionKey)) || null
+          : null;
 
+        let sourceHref = "{escape(asset_href(GRID_IMAGE_NAME))}";
+        let sourceStartRow = 1;
+        let sourceStartColumn = 1;
+        let sourceRowSpan = totalRows;
+        let sourceColumnSpan = totalColumns;
+
+        if (matchingRegion) {{
+          sourceHref = matchingRegion.href;
+          sourceStartRow = matchingRegion.startRow;
+          sourceStartColumn = matchingRegion.startColumn;
+          sourceRowSpan = matchingRegion.endRow - matchingRegion.startRow + 1;
+          sourceColumnSpan = matchingRegion.endColumn - matchingRegion.startColumn + 1;
+        }}
+
+        const focusAspect = (({GRID_IMAGE_WIDTH} * totalRows * spanColumns) / ({GRID_IMAGE_HEIGHT} * totalColumns * spanRows)).toFixed(6);
+        const imageWidth = ((sourceColumnSpan / spanColumns) * 100).toFixed(6);
+        const imageHeight = ((sourceRowSpan / spanRows) * 100).toFixed(6);
+        const offsetX = (-((minColumn - sourceStartColumn) / spanColumns) * 100).toFixed(6);
+        const offsetY = (-((minRow - sourceStartRow) / spanRows) * 100).toFixed(6);
+
+        entityFocusPreviewImage.src = sourceHref;
         entityFocusPreview.style.setProperty("--tile-aspect", focusAspect);
         entityFocusPreview.style.setProperty("--tile-offset-x", `${{offsetX}}%`);
         entityFocusPreview.style.setProperty("--tile-offset-y", `${{offsetY}}%`);
@@ -1533,6 +1624,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
           startCoord: `${{Object.keys(rowOrder).find((row) => rowOrder[row] === minRow)}}${{minColumn}}`,
           endCoord: `${{Object.keys(rowOrder).find((row) => rowOrder[row] === maxRow)}}${{maxColumn}}`,
           isRegion: spanRows > 1 || spanColumns > 1,
+          detailLabel: matchingRegion ? matchingRegion.label : "",
         }};
       }}
 
@@ -1580,6 +1672,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         const preferredCoord = card.dataset.coord || "";
         const entityId = entry.dataset.entityId || "";
         const entityName = entry.dataset.entityName || "";
+        const detailRegion = entry.dataset.detailRegion || "";
         const coords = Array.from(new Set(
           Array.from(panel.querySelectorAll(".tile-entry-coords span"))
             .flatMap((node) => (node.textContent || "").split(","))
@@ -1589,10 +1682,10 @@ def build_html(tiles: list[dict[str, object]]) -> str:
 
         entityFocusTitle.textContent = entityName;
         entityFocusBody.innerHTML = panel.innerHTML;
-        const previewBounds = syncFocusPreview(card, coords);
+        const previewBounds = syncFocusPreview(card, coords, detailRegion);
         entityFocusPreviewLabel.textContent = preferredCoord
           ? previewBounds && previewBounds.startCoord
-            ? `${{previewBounds.isRegion ? "Region" : "Tile"}} ${{previewBounds.startCoord}}${{previewBounds.endCoord !== previewBounds.startCoord ? ` to ${{previewBounds.endCoord}}` : ""}} · selected tile ${{preferredCoord}}`
+            ? `${{previewBounds.isRegion ? "Region" : "Tile"}} ${{previewBounds.startCoord}}${{previewBounds.endCoord !== previewBounds.startCoord ? ` to ${{previewBounds.endCoord}}` : ""}} · selected tile ${{preferredCoord}}${{previewBounds.detailLabel ? ` · detail ${{previewBounds.detailLabel}}` : ""}}`
             : `Selected tile ${{preferredCoord}}`
           : "";
 

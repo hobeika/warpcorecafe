@@ -790,6 +790,7 @@ entities:
     ref_image: null
     note: null
     coords: [H2]
+    detail_region: A1R13
   blue_sun_poster_firefly_serenity_2002:
     name: Blue Sun poster, Firefly/Serenity (2002)
     aliases: []
@@ -860,6 +861,7 @@ entities:
     ref_image: voc_robot_doctor_who_the_robots_of_death__H4.jpg
     note: null
     coords: [H4]
+    detail_region: A1R13
   nalan_cheel_modal_nodes_bith_band_star_wars_a_new_hope_1977:
     name: Nalan Cheel (Modal Nodes Bith Band), Star Wars A New Hope (1977)
     aliases: []
@@ -1309,12 +1311,20 @@ entities:
     note: null
     coords: [I10]
   waldo_zeptic_the_adventures_of_the_galaxy_rangers:
-    name: Waldo Zeptic (The Adventures of the Galaxy Rangers)
+    name: Ambassador Waldo Zeptic, The Adventures of the Galaxy Rangers (1986)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://galaxyrangers.fandom.com/wiki/Waldo_Zeptic
+    ref_image: waldo_zeptic.jpg
     note: null
-    coords: [I11]
+    coords: [I12]
+  pris_blade_runner:
+    name: Pris, Blade Runner (1982)
+    aliases: []
+    ref_url: https://bladerunner.fandom.com/wiki/Pris
+    ref_image: pris_blade_runner.jpg
+    note: null
+    coords: [I12]
+    detail_region: A1R13
   martian_girl_lisa_marie_mars_attacks_1996_also_j11:
     name: Martian Girl (Lisa Marie), Mars Attacks (1996) (Also J11)
     aliases: []
