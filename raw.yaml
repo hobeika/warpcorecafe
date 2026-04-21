@@ -1706,7 +1706,7 @@ entities:
     ref_url: https://villains.fandom.com/wiki/General_Roth%27h%27ar_Sarris
     ref_image: sarris.jpg
     note: null
-    coords: [L7, K8, L8, M8, N8]
+    coords: [K7, L7, K8, L8, M8, N8]
   kabe_star_wars:
     name: Kabe (Star Wars)
     aliases: []
