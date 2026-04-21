@@ -1757,9 +1757,9 @@ entities:
     note: null
     coords: [K10]
   beverly_crusher_star_trek:
-    name: Beverly Crusher, Star Trek The Next Generation Season 6
+    name: Doctor Beverly Crusher, Star Trek The Next Generation Season 6
     aliases: []
-    ref_url: https://memory-alpha.fandom.com/wiki/Officer
+    ref_url: https://memory-alpha.fandom.com/wiki/Beverly_Crusher
     ref_image: beverly_crusher.webp
     note: 'The reference is a cosplay of Beverly Crusher from Star Trek: The Next Generation Season 6'
     coords: [K10, K11, L11]
