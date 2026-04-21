@@ -2302,6 +2302,13 @@ entities:
     ref_image: null
     note: null
     coords: [N10, N11]
+  metaluna_mutant:
+    name: Metaluna Mutant, This Island Earth (1955)
+    aliases: []
+    ref_url: https://villains.fandom.com/wiki/Metaluna_Mutants
+    ref_image: metaluna.jpg
+    note: null
+    coords: [M11, N11, O11, N12]
   howard_the_duck_howard_the_duck_guardians_of_the_galaxy:
     name: Howard the Duck, Howard the Duck & Guardians of the Galaxy
     aliases: []
