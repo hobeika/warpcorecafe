@@ -24,7 +24,6 @@ REFERENCE_IMAGE_DIR = "references"
 DETAIL_IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 ARTIST_NAME = "Jeff Carlisle"
 IDENTIFICATION_TOTAL = 286
-IDENTIFICATION_DONE = 60
 ARTIST_BIO = [
     (
         "A lifelong science-fiction and fantasy fan, Jeff Carlisle traces the start of "
@@ -138,6 +137,20 @@ def group_tiles(
         row = re.match(r"^[A-Z]+", coord).group(0)
         rows.setdefault(row, []).append(tile)
     return rows
+
+
+def count_identified_entities(tiles: list[dict[str, object]]) -> int:
+    identified: set[str] = set()
+
+    for tile in tiles:
+        for item in tile.get("items", []):
+            entity_id = str(item.get("entity_id", "")).strip()
+            ref_url = str(item.get("ref_url", "")).strip()
+            ref_image = str(item.get("ref_image", "")).strip()
+            if entity_id and ref_url and ref_image:
+                identified.add(entity_id)
+
+    return len(identified)
 
 
 def split_coord(coord: str) -> tuple[str, int]:
@@ -415,7 +428,12 @@ def build_html(tiles: list[dict[str, object]]) -> str:
     rows = group_tiles(tiles)
     total_tiles = len(tiles)
     total_items = sum(len(tile["items"]) for tile in tiles)
-    identification_percent = (IDENTIFICATION_DONE / IDENTIFICATION_TOTAL) * 100
+    identification_done = count_identified_entities(tiles)
+    identification_percent = (
+        (identification_done / IDENTIFICATION_TOTAL) * 100
+        if IDENTIFICATION_TOTAL
+        else 0
+    )
     max_column = max(
         int(re.search(r"\d+", str(tile["coord"])).group(0))
         for row in rows.values()
@@ -1299,12 +1317,12 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         <p>{escape(SUBTITLE)}. Search by tile, character, ship, show, or franchise.</p>
         <section class="progress-card" aria-label="Work in progress status">
           <strong>Work in progress</strong>
-          <p>This catalogue is still being identified tile by tile. There are {IDENTIFICATION_TOTAL} references to document, and {IDENTIFICATION_DONE} have been properly identified so far.</p>
+          <p>This catalogue is still being identified tile by tile. There are {IDENTIFICATION_TOTAL} references to document, and {identification_done} have been properly identified so far.</p>
           <div class="progress-bar" aria-hidden="true" style="--progress:{identification_percent:.2f}%;">
             <span></span>
           </div>
           <div class="progress-meta">
-            <span>{IDENTIFICATION_DONE} / {IDENTIFICATION_TOTAL} identified</span>
+            <span>{identification_done} / {IDENTIFICATION_TOTAL} identified</span>
             <span>{identification_percent:.1f}% complete</span>
           </div>
           <a class="progress-link" href="{escape(PROJECT_URL)}" target="_blank" rel="noreferrer">Open the identification project board</a>
