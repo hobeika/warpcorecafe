@@ -1652,10 +1652,10 @@ entities:
     note: null
     coords: [K3]
   kuato_total_recall_1990:
-    name: Kuato (Total Recall, 1990)
+    name: Kuato, Total Recall (1990)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://moviemorgue.fandom.com/wiki/Kuato
+    ref_image: kuato.jpg
     note: null
     coords: [K4]
   he_man_he_man_and_the_masters_of_the_universe_cartoon_1983_1985_continued_in_k5:
