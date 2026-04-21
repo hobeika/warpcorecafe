@@ -1470,12 +1470,12 @@ entities:
     note: null
     coords: [J8]
   vina_as_an_orion_slave_girl_star_trek_tos:
-    name: 'Vina as an Orion slave girl (Star Trek: TOS)'
+    name: 'Vina as an Orion slave girl, Star Trek: The Original Series (1965)'
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://memory-alpha.fandom.com/wiki/Orion_slave_girl
+    ref_image: vina.jpg
     note: null
-    coords: [J9]
+    coords: [J9, J10, K9, K10]
   r2_kt_star_wars:
     name: R2-KT (Star Wars)
     aliases: []
@@ -1490,11 +1490,11 @@ entities:
     ref_image: null
     note: null
     coords: [J9]
-  ? det_george_francisco_alien_nation_either_that_s_him_or_he_s_the_man_in_the_blue_suit_over_in_j12_it_could_be_either_one_but_i_think_it_s_this_one
-  : name: Det. George Francisco (Alien Nation) (Either that's him, or he's the man in the blue suit over in J12. It could be either one. But I think it's this one.)
+  george_francisco_alien_nation:
+    name: George Francisco, Alien Nation (1988)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://aliennation.fandom.com/wiki/George_Francisco
+    ref_image: george_francisco.jpg
     note: null
     coords: [J9]
   ewoks_star_wars:
