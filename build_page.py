@@ -23,7 +23,7 @@ REFERENCE_IMAGE_DIR = "references"
 DETAIL_IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 ARTIST_NAME = "Jeff Carlisle"
 IDENTIFICATION_TOTAL = 286
-IDENTIFICATION_DONE = 51
+IDENTIFICATION_DONE = 54
 ARTIST_BIO = [
     (
         "A lifelong science-fiction and fantasy fan, Jeff Carlisle traces the start of "
@@ -1032,16 +1032,20 @@ def build_html(tiles: list[dict[str, object]]) -> str:
 
       .tile-entry-media {{
         display: none;
-        overflow: hidden;
-        border-radius: 14px;
-        border: 1px solid var(--line);
-        background: rgba(255, 252, 247, 0.9);
+        justify-self: start;
+        width: auto;
+        max-width: 100%;
+        line-height: 0;
       }}
 
       .tile-entry-media img {{
         display: block;
-        width: 100%;
+        width: auto;
+        max-width: 100%;
         height: auto;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(255, 252, 247, 0.9);
       }}
 
       .tile-preview {{
@@ -1197,11 +1201,12 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       }}
 
       .entity-focus-body .tile-entry-media {{
-        display: block;
+        display: inline-block;
       }}
 
       .entity-focus-body .tile-entry-media img {{
-        width: min(100%, 28rem);
+        width: auto;
+        max-width: min(100%, 28rem);
       }}
 
       .entity-focus-preview {{

@@ -1819,13 +1819,13 @@ entities:
     ref_image: null
     note: null
     coords: [K12]
-  admiral_ackbar_star_wars_episode_vi_return_of_the_jedi:
-    name: 'Admiral Ackbar (Star Wars: Episode VI - Return of the Jedi)'
+  mon_calamari_star_wars:
+    name: Mon Calamari Officer, Return of the Jedi (1983)
     aliases: []
-    ref_url: null
-    ref_image: null
-    note: null
-    coords: [K12]
+    ref_url: https://starwars.fandom.com/wiki/Mon_Calamari
+    ref_image: mon_calamari.jpg
+    note: This is not Admiral Gial Ackbar
+    coords: [K12, K13]
   col_wilma_deering_buck_rogers_in_the_25th_century_1979:
     name: Col. Wilma Deering (Buck Rogers in the 25th Century, 1979)
     aliases: []
