@@ -1974,19 +1974,33 @@ entities:
     note: null
     coords: [L7, M7, N7]
   princess_aura_flash_gordon_1980_source:
-    name: Princess Aura (Flash Gordon, 1980, source)
+    name: Princess Aura, Flash Gordon (1980)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://flashgordon.fandom.com/wiki/Princess_Aura
+    ref_image: princess_aura.jpg
     note: null
-    coords: [L7]
-  twi_lek_dignitary_with_starlog_magazine_star_wars_episode_iii_revenge_of_the_sith:
-    name: 'Twi''lek dignitary with STARLOG magazine (Star Wars: Episode III - Revenge of the Sith)'
+    coords: [L7, M7, N7, L8, M8, N8]
+  t_800_skull:
+    name: T-800 skull, Terminator (1984)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://terminator.fandom.com/wiki/T-800
+    ref_image: t-800_skull.jpg
     note: null
-    coords: [L8]
+    coords: [L6]
+  pampy_twi_lek_dignitary_star_wars_episode_iii_revenge_of_the_sith:
+    name: 'Pampy (Twi''lek dignitary), Star Wars: Episode III - Revenge of the Sith (2005)'
+    aliases: []
+    ref_url: https://starwars.fandom.com/wiki/Pampy
+    ref_image: pampy_and_supy.jpg
+    note: null
+    coords: [L8, M8, N8, L9, M9]
+  starlog_magazine:
+    name: STARLOG magazine
+    aliases: []
+    ref_url: https://en.wikipedia.org/wiki/Starlog
+    ref_image: starlog.jpg
+    note: null
+    coords: [ M8, M9]
   jessica_atreides_dune:
     name: Lady Jessica Atreides, DUNE (1984)
     aliases: []
@@ -2316,6 +2330,13 @@ entities:
     ref_image: porg_ground_floor.webp
     note: null
     coords: [O13, P13, Q13]
+  advozse_cantina_alien_star_wars_a_new_hope:
+    name: Advozse cantina alien, Star Wars A New Hope (1977)
+    aliases: []
+    ref_url: https://starwars.fandom.com/wiki/Advozse
+    ref_image: advozse.webp
+    note: null
+    coords: [M13, N13]
   the_great_gazoo_the_flintstones_1965:
     name: The Great Gazoo, The Flintstones (1965)
     aliases: []
