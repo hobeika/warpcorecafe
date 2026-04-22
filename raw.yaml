@@ -1192,8 +1192,8 @@ entities:
     ref_image: null
     note: null
     coords: [I8]
-  kryton_cat_lister_rimmer_i9_red_dwarf:
-    name: Kryton, Cat, Lister & Rimmer (I9) (Red Dwarf)
+  kryton_cat_lister_rimmer_red_dwarf:
+    name: Kryton, Cat, Lister & Rimmer (Red Dwarf)
     aliases: []
     ref_url: null
     ref_image: null
