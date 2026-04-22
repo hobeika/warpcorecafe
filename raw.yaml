@@ -1105,8 +1105,8 @@ entities:
     ref_image: null
     note: null
     coords: [H12]
-  korben_dallas_s_flying_taxi_the_fifth_element_h13_i12:
-    name: Korben Dallas's flying Taxi (The Fifth Element, H13 - I12)
+  korben_dallas_s_flying_taxi_the_fifth_element:
+    name: Korben Dallas's flying Taxi, The Fifth Element
     aliases: []
     ref_url: null
     ref_image: null
@@ -1283,8 +1283,8 @@ entities:
     ref_image: null
     note: null
     coords: [I10]
-  ? itchy_malla_a_guess_but_all_of_chewbacca_s_family_are_sitting_there_the_third_in_i10_just_can_t_tell_them_apart_the_star_wars_holiday_special
-  : name: Itchy & Malla (A guess, but all of Chewbacca's family are sitting there, the third in I10. Just can't tell them apart. The Star Wars Holiday Special)
+  itchy_malla:
+    name: Itchy & Malla
     aliases: []
     ref_url: null
     ref_image: null
