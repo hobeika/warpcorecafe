@@ -865,20 +865,14 @@ entities:
     ref_image: Nalan_Cheel-SW_Card_Trader.webp
     note: null
     coords: [H4]
-  jabba_the_hutt_star_wars_return_of_the_jedi:
-    name: Jabba the Hutt, Star Wars Return of the Jedi
-    aliases: []
-    ref_url: null
-    ref_image: null
-    note: null
-    coords: [H4]
   jabba_the_hutt_star_wars_return_of_the_jedi_1983:
     name: Jabba the Hutt, Star Wars Return of the Jedi (1983)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
-    coords: [H5]
+    coords: [H4, H5]
+    detail_region: A1R13
   jeff_carlisle_on_jabba_s_lap:
     name: Jeff Carlisle on Jabba's lap
     aliases: []
@@ -886,20 +880,23 @@ entities:
     ref_image: null
     note: null
     coords: [H5]
+    detail_region: A1R13
   tech_mo_r_modal_nodes_bith_band_star_wars_a_new_hope_1977:
     name: Tech Mo'r (Modal Nodes Bith Band), Star Wars A New Hope (1977)
     aliases: []
     ref_url: https://www.starwars.com/databank/figrin-d-an-and-the-modal-nodes
     ref_image: null
     note: null
-    coords: [H5]
+    coords: [H5, I5]
+    detail_region: A1R13
   sy_snootles_in_jack_burton_tank_top_return_of_the_jedi_1983:
     name: Sy Snootles (in Jack Burton tank top), Return of the Jedi (1983)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
-    coords: [H5, H6]
+    coords: [H5, H6, I5, I6]
+    detail_region: A1R13
   wak_explorers_1985:
     name: Wak, Explorers (1985)
     aliases: []
