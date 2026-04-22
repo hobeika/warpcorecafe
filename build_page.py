@@ -473,10 +473,53 @@ def build_html(tiles: list[dict[str, object]]) -> str:
         },
         key=str.casefold,
     )
+    suggestion_targets: dict[str, dict[str, str]] = {}
+    suggestion_collisions: set[str] = set()
+    entities_by_id: dict[str, dict[str, object]] = {}
+
+    for tile in tiles:
+        tile_coord = str(tile["coord"]).strip()
+        for item in tile["items"]:
+            entity_id = str(item.get("entity_id", "")).strip()
+            if not entity_id:
+                continue
+            entity = entities_by_id.setdefault(
+                entity_id,
+                {
+                    "coord": next(
+                        (
+                            str(coord).strip()
+                            for coord in item.get("coords", [])
+                            if str(coord).strip()
+                        ),
+                        tile_coord,
+                    ),
+                    "terms": set(),
+                },
+            )
+            for value in [item.get("name", ""), *item.get("aliases", [])]:
+                term = str(value).strip()
+                if term:
+                    entity["terms"].add(term)
+
+    for entity_id, entity in entities_by_id.items():
+        coord = str(entity["coord"]).strip()
+        for term in entity["terms"]:
+            key = str(term).lower()
+            existing = suggestion_targets.get(key)
+            if existing and existing["entityId"] != entity_id:
+                suggestion_collisions.add(key)
+                continue
+            suggestion_targets[key] = {"entityId": entity_id, "coord": coord}
+
+    for key in suggestion_collisions:
+        suggestion_targets.pop(key, None)
+
     suggestion_options = "\n".join(
         f'            <option value="{escape(suggestion)}"></option>'
         for suggestion in suggestions
     )
+    suggestion_targets_js = json.dumps(suggestion_targets)
 
     return f"""<!doctype html>
 <html lang="en">
@@ -1400,6 +1443,7 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       const totalRows = {total_rows};
       const rowOrder = {{{row_order_js}}};
       const detailRegions = {detail_regions_js};
+      const suggestionTargets = {suggestion_targets_js};
       const prefersDirectManipulation = window.matchMedia("(pointer: coarse)").matches;
       const matchingCoords = new Set();
       let activeCoord = "";
@@ -1431,6 +1475,11 @@ def build_html(tiles: list[dict[str, object]]) -> str:
           url.searchParams.delete("coord");
         }}
         window.history.replaceState({{}}, "", `${{url.pathname}}${{url.search}}${{url.hash}}`);
+      }}
+
+      function findSuggestionTarget(value) {{
+        const key = (value || "").trim().toLowerCase();
+        return key ? suggestionTargets[key] || null : null;
       }}
 
       function applyFilter(updateUrl = true, preferredCoord = "") {{
@@ -1757,6 +1806,11 @@ def build_html(tiles: list[dict[str, object]]) -> str:
       }}
 
       searchInput.addEventListener("input", () => {{
+        const target = findSuggestionTarget(searchInput.value);
+        if (target) {{
+          openEntityById(target.entityId, target.coord, {{ preserveState: true }});
+          return;
+        }}
         leaveEntityFocus(false);
         applyFilter();
       }});

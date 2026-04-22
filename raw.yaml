@@ -500,10 +500,10 @@ entities:
   maximilian_the_black_hole_1979:
     name: Maximilian, The Black Hole (1979)
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://disney.fandom.com/wiki/Maximilian
+    ref_image: maximilian.jpg
     note: null
-    coords: [F2]
+    coords: [F1, G1, E2, F2, G2, F3, G3]
   robot_jox_mech_fight_achilles_left_vs_alexander_right:
     name: 'Robot Jox mech fight: Achilles (left) vs Alexander (right)'
     aliases: []
@@ -1658,19 +1658,21 @@ entities:
     note: null
     coords: [J12]
   a_red_lectroid_the_adventures_of_buckaroo_banzai_across_the_8th_dimension:
-    name: A Red Lectroid (The Adventures of Buckaroo Banzai Across the 8th Dimension)
+    name: John Bigbooté, The Adventures of Buckaroo Banzai Across the 8th Dimension (1984)
     aliases: []
-    ref_url: null
-    ref_image: null
-    note: null
-    coords: [J12]
+    ref_url: https://buckaroobanzai.fandom.com/wiki/John_Bigboot%C3%A9
+    ref_image: Bigboote.jpg
+    note: 'John Bigbooté is a Red Lectroid who appears to be Lord John Whorfin’s most competent henchman. Whorfin pronounces his name as “Big booty”, but Bigbooté insists that it’s pronounced “Big-boo-tay”.'
+    coords: [J13]
+    detail_region: A1R13
   michael_the_good_place:
     name: (?) Michael (The Good Place)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
-    coords: [J12]
+    coords: [J13]
+    detail_region: A1R13
   darth_vader_star_wars_only_right_arm_and_buttons_of_the_suit_visible:
     name: Darth Vader (Star Wars) (only right arm and buttons of the suit visible)
     aliases: []
@@ -1930,13 +1932,20 @@ entities:
     ref_image: max_headroom.jpg
     note: null
     coords: [L3]
-  saurian_brandy_bottle_star_trek:
-    name: Saurian brandy bottle (Star Trek)
+  saurian_brandy_bottle_star_trek_table:
+    name: 2268 Saurian brandy bottle at the table, Star Trek
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://memory-alpha.fandom.com/wiki/Saurian_brandy
+    ref_image: Saurian_brandy_2268.webp
     note: null
-    coords: [L3, N9]
+    coords: [N9, N10]
+  saurian_brandy_bottle_star_trek_bar:
+    name: 2268 Saurian brandy bottle at the bar, Star Trek
+    aliases: []
+    ref_url: https://memory-alpha.fandom.com/wiki/Saurian_brandy
+    ref_image: Saurian_brandy_2268.webp
+    note: null
+    coords: [L3, M3]
   kanar_bottle_star_trek_deep_space_nine:
     name: 'Kanar bottle (Star Trek: Deep Space Nine)'
     aliases: []
@@ -2556,8 +2565,8 @@ entities:
   captain_dathon_star_trek_the_next_generation_episode_darmok:
     name: Captain Dathon, Star Trek The Next Generation episode "Darmok"
     aliases: []
-    ref_url: null
-    ref_image: null
+    ref_url: https://memory-alpha.fandom.com/wiki/Dathon
+    ref_image: dathon.jpg
     note: null
     coords: [P8, P9, Q8, Q9, R8, R9]
   fizgig_the_dark_crystal:
