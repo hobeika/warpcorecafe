@@ -1234,8 +1234,8 @@ entities:
     ref_image: null
     note: null
     coords: [I9]
-  ? lumpy_a_guess_but_all_of_chewbacca_s_family_are_sitting_there_the_other_two_in_i11_just_can_t_tell_them_apart_the_star_wars_holiday_special
-  : name: Lumpy (A guess, but all of Chewbacca's family are sitting there, the other two in I11. Just can't tell them apart. The Star Wars Holiday Special)
+  lumpy:
+    name: Lumpy
     aliases: []
     ref_url: null
     ref_image: null
