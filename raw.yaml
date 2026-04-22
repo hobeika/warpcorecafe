@@ -85,7 +85,7 @@ entities:
     coords: [A7, A8, B7, B8]
     detail_region: A1R13 (outdoor)
   romulan_bird_of_prey_star_trek_tos:
-    name: 'Romulan Bird of Prey (Star Trek: TOS)'
+    name: 'Romulan Bird of Prey (Star Trek: The Original Series (1965))'
     aliases: []
     ref_url: null
     ref_image: null
@@ -127,7 +127,7 @@ entities:
     note: null
     coords: [B1]
   imperial_star_destroyer_star_wars:
-    name: Imperial Star Destroyer (Star Wars)
+    name: Imperial Star Destroyer, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -154,8 +154,8 @@ entities:
     ref_image: null
     note: null
     coords: [B4]
-  star_fury_babylon_5_also_b6_c5_c6:
-    name: Star Fury (Babylon 5) [Also B6, C5, C6]
+  star_fury_babylon_5:
+    name: Star Fury, Babylon 5
     aliases: []
     ref_url: null
     ref_image: null
@@ -196,27 +196,20 @@ entities:
     ref_image: null
     note: null
     coords: [B8]
-  moya_farscape_also_b9:
-    name: Moya (Farscape) (Also B9)
+  moya_farscape:
+    name: Moya, Farscape (1999-2004)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [B8]
-  jetfire_transformers_also_b9:
-    name: Jetfire (Transformers) (Also B9)
+  jetfire_transformers:
+    name: Jetfire, Transformers
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [B8]
-  moya_farscape_continued:
-    name: Moya (Farscape) continued.
-    aliases: []
-    ref_url: null
-    ref_image: null
-    note: null
-    coords: [B9]
   gremlin_gremlins:
     name: Gremlin (Gremlins)
     aliases: []
@@ -232,7 +225,7 @@ entities:
     note: null
     coords: [B13, C13]
   the_millennium_falcon_star_wars:
-    name: The Millennium Falcon (Star Wars)
+    name: The Millennium Falcon, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -245,15 +238,15 @@ entities:
     ref_image: null
     note: null
     coords: [C2]
-  bebop_cowboy_bebop_also_d3:
-    name: Bebop (Cowboy Bebop) (also D3)
+  bebop_cowboy_bebop:
+    name: Bebop, Cowboy Bebop
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [C3]
-  paranoid_battlesuit_gall_force_eternal_story_also_at_c4_d4:
-    name: 'Paranoid battlesuit (Gall Force: Eternal Story) (also at C4, D4)'
+  paranoid_battlesuit_gall_force_eternal_story:
+    name: 'Paranoid battlesuit, Gall Force: Eternal Story'
     aliases: []
     ref_url: null
     ref_image: null
@@ -266,8 +259,8 @@ entities:
     ref_image: null
     note: null
     coords: [C4]
-  ravager_m_ship_the_milano_guardians_of_the_galaxy_also_at_c3_d4:
-    name: Ravager M-ship, The Milano (Guardians of the Galaxy) (also at C3, D4)
+  ravager_m_ship_the_milano_guardians_of_the_galaxy:
+    name: Ravager M-ship, The Milano, Guardians of the Galaxy
     aliases: []
     ref_url: null
     ref_image: null
@@ -329,8 +322,8 @@ entities:
     ref_image: null
     note: null
     coords: [D1]
-  insignia_rebel_alliance_star_wars_continues_d1:
-    name: 'Insignia: Rebel Alliance (Star Wars, continues D1)'
+  insignia_rebel_alliance_star_wars:
+    name: 'Insignia: Rebel Alliance, Star Wars'
     aliases: []
     ref_url: null
     ref_image: null
@@ -343,8 +336,8 @@ entities:
     ref_image: viper_probe_droid.jpg
     note: The Viper probe droid, commonly referred to as the Imperial probe droid, was a model of probe droid manufactured by Arakyd Industries.
     coords: [D3, D4, E3, E4, F3, F4]
-  close_encounters_of_the_third_kind_mothership_also_d5:
-    name: Close Encounters of the Third Kind mothership (also D5)
+  close_encounters_of_the_third_kind_mothership:
+    name: Close Encounters of the Third Kind mothership
     aliases: []
     ref_url: null
     ref_image: null
@@ -428,7 +421,7 @@ entities:
     note: null
     coords: [E1]
   insignia_galactic_empire_star_wars:
-    name: 'Insignia: Galactic Empire (Star Wars)'
+    name: 'Insignia: Galactic Empire, Star Wars'
     aliases: []
     ref_url: null
     ref_image: null
@@ -525,15 +518,15 @@ entities:
     ref_image: null
     note: null
     coords: [F5]
-  optimus_prime_transformers_also_f8:
-    name: -Optimus Prime (Transformers) (also F8)
+  optimus_prime_transformers:
+    name: Optimus Prime (Transformers)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [F7]
-  iron_giant_from_the_iron_giant_left_hand_appears_in_g9_and_h9:
-    name: Iron Giant from The Iron Giant (left hand appears in G9 and H9)
+  iron_giant_from_the_iron_giant_left_hand:
+    name: Iron Giant from The Iron Giant
     aliases: []
     ref_url: null
     ref_image: null
@@ -637,8 +630,8 @@ entities:
     ref_image: null
     note: null
     coords: [G5]
-  gypsy_mystery_science_theater_3000_also_g6:
-    name: Gypsy, Mystery Science Theater 3000 (also G6)
+  gypsy_mystery_science_theater_3000:
+    name: Gypsy, Mystery Science Theater 3000
     aliases: []
     ref_url: null
     ref_image: null
@@ -736,7 +729,7 @@ entities:
     note: null
     coords: [G12]
   lambda_class_t_4a_shuttle_star_wars:
-    name: Lambda-class T-4a shuttle (Star Wars)
+    name: Lambda-class T-4a shuttle, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -1135,8 +1128,8 @@ entities:
     note: null
     coords: [I1]
     detail_region: A1R13
-  marta_orion_slave_girl_star_trek_tos_whom_gods_destroy_also_j3:
-    name: 'Marta, Orion slave girl (Star Trek: TOS, "Whom Gods Destroy")'
+  marta_orion_slave_girl_star_trek_tos_whom_gods_destroy:
+    name: 'Marta, Orion slave girl (Star Trek: The Original Series (1965), "Whom Gods Destroy")'
     aliases: []
     ref_url: null
     ref_image: marta_orion.jpg
@@ -1158,7 +1151,7 @@ entities:
     note: null
     coords: [I4, I5, J4, J5]
   dominar_rygel_xvi_farscape:
-    name: Dominar Rygel XVI (Farscape)
+    name: Dominar Rygel XVI, Farscape (1999-2004)
     aliases: []
     ref_url: null
     ref_image: null
@@ -1234,8 +1227,8 @@ entities:
     ref_image: null
     note: null
     coords: [I9]
-  aviana_mizzo_starchaser_the_legend_of_orin_continues_i10:
-    name: 'Aviana & Mizzo (Starchaser: The Legend of Orin, continues I10)'
+  aviana_mizzo_starchaser_the_legend_of_orin:
+    name: 'Aviana & Mizzo, Starchaser: The Legend of Orin'
     aliases: []
     ref_url: null
     ref_image: null
@@ -1348,15 +1341,15 @@ entities:
     note: null
     coords: [I12]
     detail_region: A1R13
-  martian_girl_lisa_marie_mars_attacks_1996_also_j11:
-    name: Martian Girl (Lisa Marie), Mars Attacks (1996) (Also J11)
+  martian_girl_lisa_marie_mars_attacks_1996:
+    name: Martian Girl (Lisa Marie), Mars Attacks (1996)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [I11]
-  chig_in_space_suit_space_above_and_beyond_bordering_i11:
-    name: 'Chig in space suit (Space: Above and Beyond) (bordering I11)'
+  chig_in_space_suit_space_above_and_beyond:
+    name: 'Chig in space suit (Space: Above and Beyond)'
     aliases: []
     ref_url: null
     ref_image: null
@@ -1427,7 +1420,7 @@ entities:
     note: null
     coords: [J2]
   horta_star_trek_tos_the_devil_in_the_dark:
-    name: 'Horta (Star Trek: TOS, "The Devil in the Dark")'
+    name: 'Horta (Star Trek: The Original Series (1965), "The Devil in the Dark")'
     aliases: []
     ref_url: null
     ref_image: null
@@ -1462,7 +1455,7 @@ entities:
     note: null
     coords: [J7]
   scorpius_farscape:
-    name: Scorpius (Farscape)
+    name: Scorpius, Farscape (1999-2004)
     aliases: []
     ref_url: null
     ref_image: null
@@ -1476,14 +1469,14 @@ entities:
     note: null
     coords: [J8]
   jar_jar_binks_star_wars:
-    name: Jar-Jar Binks (Star Wars)
+    name: Jar-Jar Binks, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [J8]
-  ruby_rhod_the_fifth_element_also_in_jk8_9:
-    name: Ruby Rhod (The Fifth Element) (also in JK8/9)
+  ruby_rhod_the_fifth_element:
+    name: Ruby Rhod (The Fifth Element)
     aliases: []
     ref_url: null
     ref_image: null
@@ -1511,14 +1504,14 @@ entities:
     note: null
     coords: [J9, J10, K9, K10]
   r2_kt_star_wars:
-    name: R2-KT (Star Wars)
+    name: R2-KT, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [J9]
   gorn_star_trek_tos:
-    name: 'Gorn (Star Trek: TOS)'
+    name: 'Gorn (Star Trek: The Original Series (1965))'
     aliases: []
     ref_url: null
     ref_image: null
@@ -1532,28 +1525,28 @@ entities:
     note: null
     coords: [J9]
   ewoks_star_wars:
-    name: Ewoks (Star Wars)
+    name: Ewoks, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [J10]
   mugato_star_trek_tos:
-    name: 'Mugato (Star Trek: TOS)'
+    name: 'Mugato (Star Trek: The Original Series (1965))'
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [J10]
   excalbian_star_trek_tos_episode_the_savage_curtain:
-    name: 'Excalbian (Star Trek: TOS, episode "The Savage Curtain")'
+    name: 'Excalbian (Star Trek: The Original Series (1965), episode "The Savage Curtain")'
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [J10]
   talosians_star_trek_tos:
-    name: 'Talosians (Star Trek: TOS)'
+    name: 'Talosians (Star Trek: The Original Series (1965))'
     aliases: []
     ref_url: null
     ref_image: null
@@ -1602,7 +1595,7 @@ entities:
     note: null
     coords: [J11]
   boba_fett_star_wars:
-    name: Boba Fett (Star Wars)
+    name: Boba Fett, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -1623,7 +1616,7 @@ entities:
     note: null
     coords: [J11]
   nien_nunb_star_wars:
-    name: Nien Nunb (Star Wars)
+    name: Nien Nunb, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -1637,7 +1630,7 @@ entities:
     note: null
     coords: [J12]
   mace_windu_star_wars:
-    name: Mace Windu (Star Wars)
+    name: Mace Windu, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -1674,14 +1667,14 @@ entities:
     coords: [J13]
     detail_region: A1R13
   darth_vader_star_wars_only_right_arm_and_buttons_of_the_suit_visible:
-    name: Darth Vader (Star Wars) (only right arm and buttons of the suit visible)
+    name: Darth Vader, Star Wars (only right arm and buttons of the suit visible)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [K2]
   wuher_the_bartender_from_mos_eisley_cantina_star_wars:
-    name: Wuher, the bartender from Mos Eisley cantina (Star Wars)
+    name: Wuher, the bartender from Mos Eisley cantina, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -1694,22 +1687,22 @@ entities:
     ref_image: kuato.jpg
     note: null
     coords: [K4]
-  he_man_he_man_and_the_masters_of_the_universe_cartoon_1983_1985_continued_in_k5:
-    name: He-Man (He-Man and the Masters of the Universe cartoon, 1983-1985) (continued in K5)
+  he_man_he_man_and_the_masters_of_the_universe_cartoon_1983_1985:
+    name: He-Man, Masters of the Universe (1983-1985)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [K4]
-  dragon_noodle_parlor_neon_sign_blade_runner_also_in_k4:
-    name: Dragon noodle parlor neon sign (Blade Runner) [also in K4]
+  dragon_noodle_parlor_neon_sign_blade_runner:
+    name: Dragon noodle parlor neon sign, Blade Runner (1982)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [K5]
   lightsaber_star_wars:
-    name: Lightsaber (Star Wars)
+    name: Lightsaber, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -1744,14 +1737,14 @@ entities:
     note: null
     coords: [K7, L7, K8, L8, M8, N8]
   kabe_star_wars:
-    name: Kabe (Star Wars)
+    name: Kabe, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [K7]
   tarfful_star_wars:
-    name: Tarfful (Star Wars)
+    name: Tarfful, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -1786,7 +1779,7 @@ entities:
     note: null
     coords: [K9]
   stormtroopers_star_wars_2:
-    name: Stormtroopers (Star Wars)
+    name: Stormtroopers, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -1800,7 +1793,7 @@ entities:
     note: 'The reference is a cosplay of Beverly Crusher from Star Trek: The Next Generation Season 6'
     coords: [K10, K11, L11]
   james_t_kirk_star_trek_tos:
-    name: 'James T. Kirk (Star Trek: TOS)'
+    name: 'James T. Kirk (Star Trek: The Original Series (1965))'
     aliases: []
     ref_url: null
     ref_image: null
@@ -1813,22 +1806,22 @@ entities:
     ref_image: null
     note: null
     coords: [K10]
-  qui_gon_jinn_star_wars_also_l10:
-    name: Qui-Gon Jinn (Star Wars) (also L10)
+  qui_gon_jinn_star_wars:
+    name: Qui-Gon Jinn, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [K10]
   han_star_wars:
-    name: Han (Star Wars)
+    name: Han, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [K11]
   leia_star_wars:
-    name: Leia (Star Wars)
+    name: Leia, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -1842,7 +1835,7 @@ entities:
     note: null
     coords: [K11]
   c3_po_star_wars:
-    name: C3-PO (Star Wars)
+    name: C3-PO, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -1904,8 +1897,8 @@ entities:
     ref_image: null
     note: null
     coords: [L1]
-  tom_servo_and_crow_t_robot_mst3k_continued_in_m1:
-    name: Tom Servo and Crow T. Robot (MST3K) (continued in M1)
+  tom_servo_and_crow_t_robot_mst3k:
+    name: Tom Servo and Crow T. Robot (MST3K)
     aliases: []
     ref_url: null
     ref_image: null
@@ -1988,15 +1981,15 @@ entities:
     ref_image: null
     note: null
     coords: [L5]
-  zik_zak_corp_logo_max_headroom_series_also_l4:
-    name: Zik-Zak Corp. logo (Max Headroom series) (also L4)
+  zik_zak_corp_logo_max_headroom_series:
+    name: Zik-Zak Corp. logo (Max Headroom series)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [L5]
-  sword_of_omens_thunder_cats_continued_in_l6:
-    name: Sword of Omens (Thunder Cats, continued in L6)
+  sword_of_omens_thunder_cats:
+    name: Sword of Omens, Thunder Cats
     aliases: []
     ref_url: null
     ref_image: null
@@ -2073,28 +2066,28 @@ entities:
     note: null
     coords: [L9]
   rose_star_wars:
-    name: Rose (Star Wars)
+    name: Rose, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [L10]
   finn_star_wars:
-    name: Finn (Star Wars)
+    name: Finn, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [L10]
-  aeryn_sun_farscape_also_m10:
-    name: Aeryn Sun (Farscape) (also M10)
+  aeryn_sun_farscape:
+    name: Aeryn Sun, Farscape (1999-2004)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [L10]
-  john_crichton_farscape_also_m10:
-    name: John Crichton (Farscape) (also M10)
+  john_crichton_farscape:
+    name: John Crichton, Farscape (1999-2004)
     aliases: []
     ref_url: null
     ref_image: null
@@ -2108,28 +2101,28 @@ entities:
     note: null
     coords: [L11, M11]
   r2_d2_star_wars:
-    name: R2-D2 (Star Wars)
+    name: R2-D2, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [L11]
   thrawn_star_wars:
-    name: Thrawn (Star Wars)
+    name: Thrawn, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [L11]
-  waldo_robot_version_where_s_waldo_continued_in_l12_m11_m12:
-    name: Waldo (robot-version) (Where's Waldo?) (continued in L12,M11,M12)
+  waldo_robot_version_where_s_waldo:
+    name: Waldo (robot-version) (Where's Waldo?)
     aliases: []
     ref_url: null
     ref_image: null
     note: null
     coords: [L11]
   scout_trooper_star_wars:
-    name: Scout trooper (Star Wars)
+    name: Scout trooper, Star Wars
     aliases: []
     ref_url: null
     ref_image: null
@@ -2149,8 +2142,8 @@ entities:
     ref_image: null
     note: null
     coords: [L13]
-  tom_servo_and_crow_t_robot_mst3k_continued_from_l1:
-    name: Tom Servo and Crow T. Robot (MST3K) (continued from L1)
+  tom_servo_and_crow_t_robot_mst3k:
+    name: Tom Servo and Crow T. Robot (MST3K)
     aliases: []
     ref_url: null
     ref_image: null
@@ -2493,7 +2486,7 @@ entities:
     note: null
     coords: [O9, P9, P10, Q9]
   maz_kanata_with_luke_skywalker_s_lightsaber_star_wars:
-    name: Maz Kanata with Luke Skywalker's lightsaber (Star Wars)
+    name: Maz Kanata with Luke Skywalker's lightsaber, Star Wars
     aliases: []
     ref_url: https://starwars.fandom.com/wiki/Maz_Kanata
     ref_image: maz_kanata.jpg
